@@ -5,13 +5,16 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
-      - echo "Moving into app directory"
+      - echo "cd into tailwind-site and install"
       - cd tailwind-site
-      - npm ci
+      - npm ci --legacy-peer-deps
+      - node -v
+      - npm -v
 
   build:
     commands:
-      - echo "Building Vite app"
+      - echo "Building app in tailwind-site"
+      - cd tailwind-site    # safe if build is started from root; harmless if already in subdir
       - npm run build
 
 artifacts:
