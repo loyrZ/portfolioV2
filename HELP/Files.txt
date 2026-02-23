@@ -1,0 +1,2 @@
+src/app.jsx = mainpage for npm run dev
+index.css = connect to tailwind css

@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+.menu-btn {
+    width: 24px;
+    height: 24px;
+    display:inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:6px;
+    cursor: pointer;
+    padding:4px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.menu-btn-top,
+.menu-btn-middle,
+.menu-btn-bottom {
+    position: absolute;
+    left: 50%;
+    width: 24px;
+    height: 2px;
+    background-color: #fff;
+    transform: translateX(-50%) rotate(0);
+    transform-origin: center center;
+    transition: transform 0.28s ease, opacity 0.18s ease;
+}
+
+.menu-btn-top {
+    top: 0;
+}
+
+.menu-btn-middle {
+    top: 7px;
+}
+
+.menu-btn-bottom {
+    top: 14px;
+}
+
+.menu-btn.open .menu-btn-top {
+    transform: translateX(-50%) translateY(7px) rotate(45deg);
+}
+
+.menu-btn.open .menu-btn-middle {
+    transform: translateX(-50%) scaleX(0);
+}
+
+.menu-btn.open .menu-btn-bottom {
+    transform: translateX(-50%) translateY(-7px) rotate(-45deg);
+}
+
+
+.text-5x1{
+    font-size: 3rem ;
+    line-height:1;
+}
+
+.tracking-wider{
+    letter-spacing:0.05em;
+}
+
+.leading-tight{
+    line-height:1.25
+}
+
+.font-light{
+    font-weight: 300;
+}
+
+.box{
+    background: linear-gradient(
+    to bottom,
+    #696b70,
+    #484b51
+    );
+    transition: background 0.5s ease;
+
+}
+
+
+.box:hover{
+    background: linear-gradient(
+            to bottom,
+            #464c59,
+            #565c65,
+            #45484e
+    );
+}
+
+.testimonialimg{
+    margin-left: 10px;
+}
