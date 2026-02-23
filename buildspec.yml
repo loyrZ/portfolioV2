@@ -5,16 +5,24 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
-      - echo Installing dependencies...
+      - echo "Installing dependencies..."
       - npm ci --legacy-peer-deps
 
-    build:
-        commands:
-          - echo Building the React app...
-          - npm run build
+  pre_build:
+    commands:
+      - echo "Pre-build (optional)"
+
+  build:
+    commands:
+      - echo "Building the React app..."
+      - npm run build
+
+  post_build:
+    commands:
+      - echo "Post-build (optional)"
 
 artifacts:
   files:
     - '**/*'
-  base-directory: dist
+  base-directory: build   # <<-- change to 'dist' if your build produces dist
   discard-paths: no
