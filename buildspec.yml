@@ -6,7 +6,7 @@ phases:
       nodejs: 18
     commands:
       - echo "Moving into app directory"
-      - cd tailwind-site
+      - cd portfolioV2/tailwind-site
       - npm ci
 
   build:
