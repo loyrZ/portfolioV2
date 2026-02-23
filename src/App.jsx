@@ -203,7 +203,7 @@ export default function App() {
 
 
                         <a
-                            href="../public/projecthub.html"
+                            href="/projecthub.html"
                             className="inline-block mt-6 py-3 px-6 bg-orange-400 rounded-full text-sm
                                        font-bold uppercase tracking-widest hover:scale-110 active:scale-95 transition duration-150"
                         >
