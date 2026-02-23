@@ -1,0 +1,35 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - echo "INSTALL PHASE: moving to app and installing deps"
+      - cd tailwind-site
+      - npm ci --legacy-peer-deps
+      - echo "node: $(node -v)  npm: $(npm -v)"
+      - echo "listing tailwind-site root:"
+      - ls -la
+
+  pre_build:
+    commands:
+      - echo "PRE_BUILD: listing project root from build agent"
+      - pwd
+      - ls -la ..
+
+  build:
+    commands:
+      - echo "BUILD: running npm run build inside tailwind-site"
+      - cd tailwind-site
+      - npm run build
+      - echo "After build, listing artifact folders:"
+      - ls -la dist || true
+      - ls -la build || true
+      - ls -la out || true
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: tailwind-site/dist
+  discard-paths: no
