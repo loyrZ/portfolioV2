@@ -5,17 +5,24 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
-      - echo "Moving into app directory"
-      - cd portfolioV2/tailwind-site
-      - npm ci
+      - echo "Installing dependencies..."
+      - npm ci --legacy-peer-deps
+
+  pre_build:
+    commands:
+      - echo "Pre-build..."
 
   build:
     commands:
-      - echo "Building Vite app"
+      - echo "Building the app..."
       - npm run build
+
+  post_build:
+    commands:
+      - echo "Post-build..."
 
 artifacts:
   files:
     - '**/*'
-  base-directory: tailwind-site/dist
+  base-directory: dist
   discard-paths: no
