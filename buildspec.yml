@@ -5,24 +5,17 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
-      - echo "Installing dependencies..."
-      - npm ci --legacy-peer-deps
-
-  pre_build:
-    commands:
-      - echo "Pre-build (optional)"
+      - echo "Moving into app directory"
+      - cd tailwind-site
+      - npm ci
 
   build:
     commands:
-      - echo "Building the React app..."
+      - echo "Building Vite app"
       - npm run build
-
-  post_build:
-    commands:
-      - echo "Post-build (optional)"
 
 artifacts:
   files:
     - '**/*'
-  base-directory: build   # <<-- change to 'dist' if your build produces dist
+  base-directory: tailwind-site/dist
   discard-paths: no
