@@ -1,8 +1,6 @@
-import {Search} from 'lucide-react'
 import {useState} from "react";
 import { FaEllipsisH, FaLinkedin, FaInstagram, FaGithub} from "react-icons/fa";
 import "./index.css";
-import { Link } from "react-router-dom";
 import { useEffect, useRef } from "react";
 
 export default function App() {
@@ -13,16 +11,11 @@ export default function App() {
             videoRef.current.playbackRate = 0.75; // 0.5 = half speed
         }
     }, []);
-    const[showSearch, setShowSearch] = useState(false);
     const[open, setOpen] = useState(false);
     const [showMore, setShowMore] = useState(false);
     const [showHub, setShowHub] = useState(false);
     const [showAbout, setShowAbout] = useState(false);
 
-    const toggleSearch = () => {
-
-        setShowSearch(!showSearch);
-    }
 
     const projects = [
         {
@@ -115,8 +108,16 @@ export default function App() {
                                           ${open ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"}
                                         `}
                         >
-                            <a href="/" className="text-white uppercase hover:text-orange-400">Home</a>
-                                                <a
+                            <button
+                                onClick={() => {
+                                    setShowAbout(false);
+                                    setShowMore(false);
+                                    setShowHub(false);
+                                }}
+                                className="text-white uppercase hover:text-orange-400"
+                            >
+                                Home
+                            </button>                                                <a
                                 href="mailto:gatessubroto@gmail.com"
                                 className="text-white uppercase hover:text-orange-400"
                             >
@@ -143,9 +144,16 @@ export default function App() {
                     <div className="relative hidden md:flex gap-6 items-center">{/* Testimonials */}
 
 
-                        <a href="/" className=" text-white uppercase
-                        hover:text-orange-400"
-                        >Home</a>
+                        <button
+                            onClick={() => {
+                                setShowAbout(false);
+                                setShowMore(false);
+                                setShowHub(false);
+                            }}
+                            className="text-white uppercase hover:text-orange-400"
+                        >
+                            Home
+                        </button>
                         <button
                             type="button"
                             onClick={() => {
@@ -179,9 +187,10 @@ export default function App() {
             <main>
                 <section
                     id="hero"
-                    className={`relative w-full h-screen flex items-center justify-center overflow-hidden transition-all duration-500
-      ${showHub ? "pb-32" : "pb-0"}`}
-                >
+                    className={`relative w-full h-screen flex items-center justify-center overflow-hidden 
+                    transition-all duration-1000
+                        ${showHub || showAbout ? "pb-32" : "pb-0"}`} //transition for get started
+                    >
                     <video
                         ref={videoRef}
                         autoPlay
@@ -200,7 +209,7 @@ export default function App() {
                             text-white md:p-8 xl:p-0
                             flex flex-col justify-center     /* <-- center vertically */
                             transition-all duration-300 ease-out
-                            ${showHub ? "-translate-y-0" : "translate-y-0"}
+                            ${showHub || showAbout ? "-translate-y-0" : "translate-y-0"}
                             text-center md:text-left
                            `}
                     >
@@ -278,9 +287,10 @@ export default function App() {
                             <button
                                 type="button"
                                 onClick={() => setShowMore(false)}
-                                className={`mt-3 text-sm uppercase text-gray-300 hover:text-white transition-all duration-300
+                                className={`mt-3 text-sm uppercase text-gray-300 hover:text-white transition-all 
+                                duration-300
                 ${!showMore || showHub
-                                    ? "opacity-0 pointer-events-none max-h-0 -translate-y-2"
+                                    ? "opacity-0 pointer-events-none max-h-0 -translate-y-2 transition-all duration-300"
                                     : "opacity-100 max-h-10 translate-y-0"
                                 }
         `}
@@ -302,9 +312,9 @@ export default function App() {
                         {showHub && (
                             <section
                                 className="-mt-10 w-full max-w-6xl mx-auto px-8 py-5 rounded-2xl
-                     bg-white/5 backdrop-blur-md border border-white/10 text-sm text-white leading-relaxed
-                     transition duration-300 ease-out transform-gpu z-40"
-                            >
+                                             bg-white/5 backdrop-blur-md border border-white/10
+                                             text-sm text-white leading-relaxed
+                                             transition duration-300 ease-out transform-gpu z-40">
                                 <div className="max-h-[48vh] overflow-y-auto overflow-x-hidden pr-9 space-y-6">
                                     {projects.map((project) => (
                                         <div key={project.id} className="p-6 bg-black/30 text-white rounded-2xl shadow-lg flex flex-col gap-4">
@@ -314,10 +324,8 @@ export default function App() {
                                             <p className="text-sm text-white/70">{project.description}</p>
                                             <div className="flex flex-wrap gap-2">
                                                 {project.tags.map((tag, i) => (
-                                                    <span key={i} className="text-xs bg-orange-400/20 text-orange-200 px-3 py-1 rounded-full">
-                      {tag}
-                    </span>
-                                                ))}
+                                                    <span key={i} className="text-xs bg-orange-400/20
+                                                    text-orange-200 px-3 py-1 rounded-full">{tag}</span>))}
                                             </div>
                                             <a href={project.href} className="mt-2 text-sm font-bold text-orange-300 hover:underline">View Project →</a>
                                         </div>
@@ -326,7 +334,8 @@ export default function App() {
                                     <button
                                         type="button"
                                         onClick={() => setShowHub(false)}
-                                        className="inline-block py-3 px-6 bg-orange-400 rounded-full text-sm font-bold uppercase tracking-widest hover:scale-90 active:scale-95 transition duration-150"
+                                        className="inline-block py-3 px-6 bg-orange-400 rounded-full text-sm font-bold
+                                         uppercase tracking-widest hover:scale-90 active:scale-95 transition duration-150"
                                     >
                                         back
                                     </button>
@@ -337,37 +346,62 @@ export default function App() {
                         {/* ABOUT PANEL (mounted only when showAbout === true) */}
                         {showAbout && (
                             <section
-                                className="mt-30 w-full  rounded-2xl -mt-10
-                                 bg-black/20 backdrop-blur-md border border-white/10 text-sm text-white leading-relaxed
-                                 transition duration-300 ease-out transform-gpu z-40"
-                                        >
-                                <div className="max-h-96 overflow-y-auto overflow-x-hidden pr-9 space-y-6">
-                                    <div className="flex flex-col md:flex-row gap-6 items-start">
-                                        <img
-                                            src="/me.jpg"
-                                            alt="About me"
-                                            className="w-32 h-32 md:w-40 md:h-40 rounded-2xl object-cover border border-white/10"
-                                        />
+                                className={`-mt-10 w-full max-w-6xl mx-auto px-8 py-5 rounded-2xl
+                                    bg-white/5 backdrop-blur-md border border-white/10 text-white leading-relaxed
+                                    transform-gpu transition-[opacity,transform] duration-500 ease-out z-40
+                                    ${showAbout ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"}
+                                  `}
+                            >
+                                <div className="relative transition-all duration-300 max-h-[128vh]">
+                                    {/* outer border layer (same shape, slightly different tone) */}
+                                    <div className="absolute inset-0 rounded-2xl border border-white/10 bg-white/5" />
 
-                                        <div className="space-y-3">
-                                            <h2 className="text-xl font-bold">About Me</h2>
-                                            <p className="text-white/70">I’m Gates Subroto — I build web apps and focus on clean UI, smooth UX, and solid code.</p>
-
-                                            <ul className="list-disc pl-5 space-y-2 text-white/80">
-                                                <li>Frontend: React, Tailwind</li>
-                                                <li>Interests: UI design, animations, performance</li>
-                                                <li>Currently working on: personal portfolio + projects</li>
-                                            </ul>
+                                    {/* main card */}
+                                    <div className="relative p-6 rounded-2xl border border-white/20 bg-black/30
+                                    text-white shadow-lg flex flex-col md:flex-row gap-6 items-start">
+                                        <div className="w-128 aspect-square">
+                                            <img
+                                                src="/image/hero.jpg"
+                                                alt="About me"
+                                                className="w-full h-full object-cover rounded-2xl border border-white/10"
+                                            />
                                         </div>
-                                    </div>
 
-                                    <button
-                                        type="button"
-                                        onClick={() => setShowAbout(false)}
-                                        className="inline-block py-3 px-6 bg-orange-400 rounded-full text-sm font-bold uppercase tracking-widest hover:scale-90 active:scale-95 transition duration-150"
-                                    >
-                                        back
-                                    </button>
+
+                                        <div className="space-y-4">
+
+                                            <div
+                                                className="space-y-3 text-white/70 leading-relaxed
+                                                      relative p-6 rounded-2xl border border-white/20 bg-black/10
+                                                      text-white md:flex-row gap-6 items-start
+                                                      max-h-[40vh] overflow-y-auto overflow-x-hidden"
+                                                                                                >
+                                                <p className="text-lg text-white/80 leading-relaxed">
+                                                    Hi, I'm Gates, a frontend engineer focused on UI systems,
+                                                    performance and user experience. I have experience with
+                                                    Node.js, MySQL, database management, and deployment, but
+                                                    frontend is where I’m strongest. I care about
+                                                    building interfaces that feel alive — clear layout, thoughtful
+                                                    spacing, consistent typography, and interactions that feel
+                                                    are reactive without being distracting.
+                                                </p>
+
+                                                <p className="text-lg text-white/80 leading-relaxed">
+                                                    Most of my work is on the frontend using JavaScript, React, and Tailwind, where I build reusable
+                                                    components, scalable design systems, and responsive layouts. I aim to make things easy to understand —
+                                                    if it can be coded, it can be presented clearly.
+                                                </p>
+
+                                                <p className="text-lg text-white/80 leading-relaxed">
+                                                    Right now I’m expanding my portfolio with projects that reflect both engineering discipline and design
+                                                    awareness. I enjoy taking an idea from concept to refinement: wireframe → UI build → motion polish →
+                                                    optimization.
+                                                </p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
                                 </div>
                             </section>
                         )}

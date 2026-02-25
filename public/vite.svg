@@ -1,1 +1,152 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--logos" width="31.88" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 257"><defs><linearGradient id="IconifyId1813088fe1fbc01fb466" x1="-.828%" x2="57.636%" y1="7.652%" y2="78.411%"><stop offset="0%" stop-color="#41D1FF"></stop><stop offset="100%" stop-color="#BD34FE"></stop></linearGradient><linearGradient id="IconifyId1813088fe1fbc01fb467" x1="43.376%" x2="50.316%" y1="2.242%" y2="89.03%"><stop offset="0%" stop-color="#FFEA83"></stop><stop offset="8.333%" stop-color="#FFDD35"></stop><stop offset="100%" stop-color="#FFA800"></stop></linearGradient></defs><path fill="url(#IconifyId1813088fe1fbc01fb466)" d="M255.153 37.938L134.897 252.976c-2.483 4.44-8.862 4.466-11.382.048L.875 37.958c-2.746-4.814 1.371-10.646 6.827-9.67l120.385 21.517a6.537 6.537 0 0 0 2.322-.004l117.867-21.483c5.438-.991 9.574 4.796 6.877 9.62Z"></path><path fill="url(#IconifyId1813088fe1fbc01fb467)" d="M185.432.063L96.44 17.501a3.268 3.268 0 0 0-2.634 3.014l-5.474 92.456a3.268 3.268 0 0 0 3.997 3.378l24.777-5.718c2.318-.535 4.413 1.507 3.936 3.838l-7.361 36.047c-.495 2.426 1.782 4.5 4.151 3.78l15.304-4.649c2.372-.72 4.652 1.36 4.15 3.788l-11.698 56.621c-.732 3.542 3.979 5.473 5.943 2.437l1.313-2.028l72.516-144.72c1.215-2.423-.88-5.186-3.54-4.672l-25.505 4.922c-2.396.462-4.435-1.77-3.759-4.114l16.646-57.705c.677-2.35-1.37-4.583-3.769-4.113Z"></path></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Lunar halo icon (textured moon, sci-fi halo, stars)">
+  <defs>
+    <!-- Background vignette -->
+    <radialGradient id="gBg" cx="50%" cy="45%" r="80%">
+      <stop offset="0%" stop-color="#0B1430"></stop>
+      <stop offset="55%" stop-color="#070B16"></stop>
+      <stop offset="100%" stop-color="#04060C"></stop>
+    </radialGradient>
+
+    <!-- Icy halo glow -->
+    <radialGradient id="gHalo" cx="50%" cy="50%" r="62%">
+      <stop offset="55%" stop-color="#7DF9FF" stop-opacity="0"></stop>
+      <stop offset="70%" stop-color="#7DF9FF" stop-opacity="0.22"></stop>
+      <stop offset="82%" stop-color="#8A7DFF" stop-opacity="0.10"></stop>
+      <stop offset="100%" stop-color="#7DF9FF" stop-opacity="0"></stop>
+    </radialGradient>
+
+    <!-- Moon shading -->
+    <radialGradient id="gMoonShade" cx="40%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#F7FBFF" stop-opacity="1"></stop>
+      <stop offset="55%" stop-color="#DCE7F5" stop-opacity="1"></stop>
+      <stop offset="100%" stop-color="#AEBED4" stop-opacity="1"></stop>
+    </radialGradient>
+
+    <!-- Subtle terminator / rim darkening -->
+    <radialGradient id="gMoonRim" cx="70%" cy="60%" r="75%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0"></stop>
+      <stop offset="70%" stop-color="#000000" stop-opacity="0.00"></stop>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.28"></stop>
+    </radialGradient>
+
+    <!-- Moon outer glow -->
+    <radialGradient id="gMoonGlow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.55"></stop>
+      <stop offset="45%" stop-color="#7DF9FF" stop-opacity="0.18"></stop>
+      <stop offset="100%" stop-color="#7DF9FF" stop-opacity="0"></stop>
+    </radialGradient>
+
+    <!-- Blur filters -->
+    <filter id="blur6" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6"></feGaussianBlur>
+    </filter>
+    <filter id="blur12" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="12"></feGaussianBlur>
+    </filter>
+
+    <!-- Very light grain -->
+    <filter id="grain" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"></feTurbulence>
+      <feColorMatrix type="saturate" values="0"></feColorMatrix>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.05"></feFuncA>
+      </feComponentTransfer>
+    </filter>
+
+    <!-- Star glow -->
+    <filter id="starGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="1.2" result="b"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="b"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" fill="url(#gBg)"></rect>
+
+  <!-- Stars (hand-placed for deterministic SVG) -->
+  <g filter="url(#starGlow)">
+    <circle cx="64" cy="88" r="1.6" fill="#EAF6FF" opacity="0.9"></circle>
+    <circle cx="112" cy="62" r="1.1" fill="#BFFBFF" opacity="0.8"></circle>
+    <circle cx="168" cy="96" r="1.3" fill="#EAF6FF" opacity="0.7"></circle>
+    <circle cx="222" cy="64" r="1.0" fill="#EAF6FF" opacity="0.7"></circle>
+    <circle cx="306" cy="78" r="1.5" fill="#D7D0FF" opacity="0.8"></circle>
+    <circle cx="384" cy="58" r="1.1" fill="#EAF6FF" opacity="0.75"></circle>
+    <circle cx="448" cy="112" r="1.6" fill="#BFFBFF" opacity="0.85"></circle>
+
+    <circle cx="86" cy="176" r="1.0" fill="#EAF6FF" opacity="0.7"></circle>
+    <circle cx="140" cy="210" r="1.4" fill="#BFFBFF" opacity="0.75"></circle>
+    <circle cx="430" cy="182" r="1.2" fill="#EAF6FF" opacity="0.7"></circle>
+    <circle cx="468" cy="224" r="1.5" fill="#D7D0FF" opacity="0.75"></circle>
+
+    <circle cx="54" cy="310" r="1.3" fill="#EAF6FF" opacity="0.65"></circle>
+    <circle cx="104" cy="356" r="1.1" fill="#BFFBFF" opacity="0.65"></circle>
+    <circle cx="412" cy="330" r="1.2" fill="#EAF6FF" opacity="0.6"></circle>
+    <circle cx="458" cy="372" r="1.6" fill="#BFFBFF" opacity="0.7"></circle>
+
+    <circle cx="180" cy="438" r="1.2" fill="#EAF6FF" opacity="0.55"></circle>
+    <circle cx="320" cy="454" r="1.1" fill="#D7D0FF" opacity="0.6"></circle>
+    <circle cx="410" cy="458" r="1.4" fill="#EAF6FF" opacity="0.55"></circle>
+  </g>
+
+  <!-- Big soft halo haze -->
+  <circle cx="256" cy="256" r="230" fill="url(#gHalo)" filter="url(#blur12)"></circle>
+
+  <!-- Icy sci-fi halo rings -->
+  <circle cx="256" cy="256" r="190" fill="none" stroke="#7DF9FF" stroke-opacity="0.35" stroke-width="5"></circle>
+  <circle cx="256" cy="256" r="190" fill="none" stroke="#7DF9FF" stroke-opacity="0.12" stroke-width="20" filter="url(#blur6)"></circle>
+
+  <circle cx="256" cy="256" r="150" fill="none" stroke="#8A7DFF" stroke-opacity="0.28" stroke-width="4"></circle>
+  <circle cx="256" cy="256" r="150" fill="none" stroke="#8A7DFF" stroke-opacity="0.10" stroke-width="16" filter="url(#blur6)"></circle>
+
+  <!-- Subtle spectral tick marks (sci-fi vibe) -->
+  <g opacity="0.22" stroke-linecap="round">
+    <path d="M256 52 L256 72" stroke="#7DF9FF" stroke-width="4"></path>
+    <path d="M460 256 L440 256" stroke="#7DF9FF" stroke-width="4"></path>
+    <path d="M256 460 L256 440" stroke="#8A7DFF" stroke-width="4"></path>
+    <path d="M52 256 L72 256" stroke="#8A7DFF" stroke-width="4"></path>
+  </g>
+
+  <!-- Moon glow -->
+  <circle cx="256" cy="256" r="92" fill="url(#gMoonGlow)" filter="url(#blur12)" opacity="0.9"></circle>
+
+  <!-- Textured Moon (base) -->
+  <g>
+    <circle cx="256" cy="256" r="44" fill="url(#gMoonShade)"></circle>
+    <!-- Rim darkening -->
+    <circle cx="256" cy="256" r="44" fill="url(#gMoonRim)"></circle>
+
+    <!-- Craters / maria (stylized) -->
+    <g opacity="0.85">
+      <circle cx="242" cy="244" r="7.5" fill="#B8C6DA" opacity="0.55"></circle>
+      <circle cx="242" cy="244" r="4.2" fill="#97A8C2" opacity="0.45"></circle>
+
+      <circle cx="274" cy="252" r="9.5" fill="#B8C6DA" opacity="0.45"></circle>
+      <circle cx="274" cy="252" r="5.0" fill="#97A8C2" opacity="0.35"></circle>
+
+      <circle cx="260" cy="278" r="6.8" fill="#B8C6DA" opacity="0.40"></circle>
+      <circle cx="260" cy="278" r="3.6" fill="#97A8C2" opacity="0.30"></circle>
+
+      <circle cx="234" cy="268" r="5.6" fill="#B8C6DA" opacity="0.35"></circle>
+      <circle cx="234" cy="268" r="2.8" fill="#97A8C2" opacity="0.28"></circle>
+
+      <ellipse cx="286" cy="270" rx="10.5" ry="6.5" fill="#AEBED4" opacity="0.28"></ellipse>
+      <ellipse cx="226" cy="254" rx="12" ry="8" fill="#AEBED4" opacity="0.18"></ellipse>
+    </g>
+
+    <!-- Subtle highlight -->
+    <circle cx="242" cy="240" r="10" fill="#FFFFFF" opacity="0.18"></circle>
+
+    <!-- Moon outline -->
+    <circle cx="256" cy="256" r="44" fill="none" stroke="#EAF6FF" stroke-opacity="0.35" stroke-width="2"></circle>
+  </g>
+
+  <!-- Wispy cloud arcs (very subtle) -->
+  <path d="M78,302 C150,250 190,365 260,322 C330,278 380,342 434,302" fill="none" stroke="#BFFBFF" stroke-opacity="0.10" stroke-width="18" stroke-linecap="round" filter="url(#blur12)"></path>
+  <path d="M92,310 C160,272 195,362 260,336 C328,306 385,348 420,322" fill="none" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="8" stroke-linecap="round" filter="url(#blur6)"></path>
+
+  <!-- Very light grain overlay -->
+  <rect width="512" height="512" filter="url(#grain)" opacity="0.35"></rect>
+</svg>
