@@ -1,0 +1,23 @@
+{/* Search Btn*/}
+                        <div
+                            id="search-btn"
+                            className="flex justify-center items-center cursor-pointer"
+                            onClick={toggleSearch} // click toggle search box
+                        >
+                            <Search className = "w-6 h-6 text-white hover:text-orange-400" />
+                        </div>
+
+                        {/*Search Box*/}
+                        <div id="search-box"
+                             className={`absolute top-10 right-0 transition-all duration-200 ease-in-out transform ${
+                                 showSearch ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"
+                             }`}
+                        >
+                            <div id="input-box" className = "p-3 bg-white rounded-full shadow-lg">
+                                <input
+                                    type="text"
+                                    placeholder="Nothing to see here"
+                                    className ="focus:outline-none text-black"
+                                />
+                            </div>
+                        </div>

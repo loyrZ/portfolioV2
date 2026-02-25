@@ -1,15 +1,16 @@
 import {Search} from 'lucide-react'
 import {useState} from "react";
 import { FaEllipsisH, FaLinkedin, FaInstagram, FaGithub} from "react-icons/fa";
-import { SiHandshake } from "react-icons/si";
 import "./index.css";
-
+import { Link } from "react-router-dom";
 
 export default function App() {
     const[showSearch, setShowSearch] = useState(false);
     const[open, setOpen] = useState(false);
     const [showMore, setShowMore] = useState(false);
     const [showHub, setShowHub] = useState(false);
+    const [showAbout, setShowAbout] = useState(false);
+
     const toggleSearch = () => {
 
         setShowSearch(!showSearch);
@@ -28,7 +29,7 @@ export default function App() {
         },
         {
             id: 2,
-            name: "Deep Learning",
+            name: "Deep Learning Neural Network",
             title: "Training Neural Network model from scratch",
             href: "/project2.html",
             description:
@@ -94,8 +95,8 @@ export default function App() {
                                           ${open ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"}
                                         `}
                         >
-                            <a href="#" className="text-white uppercase hover:text-orange-400">Home</a>
-                            <a
+                            <a href="/" className="text-white uppercase hover:text-orange-400">Home</a>
+                                                <a
                                 href="mailto:gatessubroto@gmail.com"
                                 className="text-white uppercase hover:text-orange-400"
                             >
@@ -122,10 +123,24 @@ export default function App() {
                     <div className="relative hidden md:flex gap-6 items-center">{/* Testimonials */}
 
 
-                        <a href="#" className=" text-white uppercase
+                        <a href="/" className=" text-white uppercase
                         hover:text-orange-400"
                         >Home</a>
+                        <a href="/aboutme" className="text-white uppercase hover:text-orange-400">About Me</a>
+                        <button
+                            type="button"
+                            onClick={() => {
+                                setShowAbout(true);
+                                setShowHub(false);
+                                setShowMore(false);
+                            }}
+                            className={`w-fit mx-auto md:mx-0 inline-block py-3 px-6 bg-orange-400 rounded-full
+                             text-sm font-bold uppercase tracking-widest hover:scale-110 active:scale-95 transition 
+                             duration-150 ${showAbout ? "hidden" : ""} `}
 
+                        >
+                            About Me
+                        </button>
                         <a
                             href="mailto:gatessubroto@gmail.com"
                             className="text-white uppercase hover:text-orange-400"
@@ -133,28 +148,7 @@ export default function App() {
                             Contact
                         </a>
                         {/* Search Btn*/}
-                        <div
-                            id="search-btn"
-                            className="flex justify-center items-center cursor-pointer"
-                            onClick={toggleSearch} // click toggle search box
-                        >
-                            <Search className = "w-6 h-6 text-white hover:text-orange-400" />
-                        </div>
 
-                        {/*Search Box*/}
-                        <div id="search-box"
-                             className={`absolute top-10 right-0 transition-all duration-200 ease-in-out transform ${
-                                 showSearch ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"
-                             }`}
-                        >
-                            <div id="input-box" className = "p-3 bg-white rounded-full shadow-lg">
-                                <input
-                                    type="text"
-                                    placeholder="Nothing to see here"
-                                    className ="focus:outline-none text-black"
-                                />
-                            </div>
-                        </div>
                     </div>
 
 
@@ -168,50 +162,57 @@ export default function App() {
                 <section
                     id="hero"
                     className={`relative w-full h-screen
-                                    bg-[url('/image/hero.jpg')]
-                                    bg-center bg-cover bg-no-repeat
-                                    flex items-end justify-center
-                                    transition-all duration-500
-                                    ${showHub ? "pb-32" : "pb-0"}`}>
+                      bg-[url('/image/hero.jpg')]
+                      bg-center bg-cover bg-no-repeat
+                      flex items-center justify-center            /* <-- items-center here */
+                      transition-all duration-500
+              ${showHub ? "pb-32" : "pb-0"}`}>
                     <div className="absolute inset-0 bg-black/50" />
                     {/* Hero Content */}
                     <div
-                        className={`relative z-10 container mx-auto max-w-[1200px]
-                                        text-white md:p-8 xl:p-0
-                                        flex flex-col
-                                        transition-all duration-300 ease-out
-                                        ${showHub ? "-translate-y-0" : "translate-y-0"}
-                                        text-center md:text-left
-                                      `}>
-                        <h1 className="text-3xl md:text-[50px] font-black uppercase leading-tight tracking-wider mb-6">
-                            {showHub
-                                ? "PROJECT HUB"
-                                : showMore
-                                    ? "INTRODUCTION"
-                                    : "HOME PAGE"}
-                            <br />
-                        </h1>
+                        className={`relative container mx-auto max-w-[1200px]
+                            text-white md:p-8 xl:p-0
+                            flex flex-col justify-center     /* <-- center vertically */
+                            transition-all duration-300 ease-out
+                            ${showHub ? "-translate-y-0" : "translate-y-0"}
+                            text-center md:text-left
+                           `}
+                    >
+                        <div>
+                            <h1 className=" relative text-3xl md:text-[50px] font-black uppercase leading-tight tracking-wider">
+                                {showHub ? "PROJECT HUB" : showMore ?
+                                    "INTRODUCTION" : "HOME PAGE"}
+                            </h1>
 
-                        <div className="relative mb-8 max-w-md">
+                            {showHub && (
+                                <p className=" text-sm md:text-base font-medium tracking-wide text-gray-500">
+                                    A selection of my work
+                                </p>
+                            )}
+                        </div>
+
+
+                        <div className="relative mb-8 max-w-2xl">
                             {/* BUTTON */}
-                            <button
-                                type="button"
-                                onClick={() => setShowMore(true)}
-                                className={`flex items-center gap-2 text-sm uppercase text-gray-300 hover:text-white transition-all duration-300
-    ${showMore || showHub
-                                    ? "opacity-0 pointer-events-none max-h-0 -translate-y-2"
-                                    : "opacity-100 max-h-10 translate-y-0"
-                                }`}
-                            >
-                                <FaEllipsisH size={20} />
-                                read more
-                            </button>
+                            {!showMore && !showHub && !showAbout ? (
+                                <button
+                                    type="button"
+                                    onClick={() => setShowMore(true)}
+                                    className="flex items-center gap-2 text-sm uppercase text-gray-300 hover:text-white
+                                    transition-all duration-300"
+                                >
+                                    <FaEllipsisH size={20} />
+                                    read more
+                                </button>
+                            ) : (
+                                <> </> // or null
+                            )}
 
                             {/* TEXT */}
                             <div
                                 className={`overflow-y-auto overflow-x-hidden text-sm text-white leading-relaxed 
                                 transition-all duration-300 ${showMore && !showHub
-                                    ? "opacity-100 max-h-80 translate-y-0"
+                                    ? "opacity-100 max-h-80 max-w-2xl translate-y-0"
                                     : "opacity-0 max-h-0 -translate-y-2 pointer-events-none"}
                                      : "opacity-0 max-h-0 -translate-y-2"}`}
                             >
@@ -260,73 +261,85 @@ export default function App() {
                         <button
                             type="button"
                             onClick={() => setShowHub(true)}
-                            className={`w-fit mx-auto md:mx-0 inline-block py-3 px-6 bg-orange-400 rounded-full text-sm font-bold uppercase tracking-widest hover:scale-110 active:scale-95 transition duration-150 ${showHub ? "hidden" : ""}`}
+                            className={`w-fit mx-auto md:mx-0 inline-block py-3 px-6 bg-orange-400 rounded-full
+                             text-sm font-bold uppercase tracking-widest hover:scale-110 active:scale-95 transition 
+                             duration-150 ${showHub || showAbout ? "hidden" : ""}`}
                         >
                             get started
                         </button>
 
-                        <section
-                            className={`mt-10 w-full max-w-6xl mx-auto
-              px-8 py-5 rounded-2xl
-              bg-black/20 backdrop-blur-md
-              border border-white/10
-              text-sm text-white leading-relaxed
-              transition duration-300 ease-out transform-gpu
-              ${showHub
-                                ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
-                                : "opacity-0 -translate-y-2 scale-[0.98] pointer-events-none"
-                            }`}
-                        >
-                            {/* Scroll container + spacing between projects */}
-                            <div className="max-h-96 overflow-y-auto overflow-x-hidden pr-2 space-y-6">
-                                {projects.map((project) => (
-                                    <div
-                                        key={project.id}
-                                        className="p-6 bg-black/30 text-white rounded-2xl shadow-lg flex flex-col gap-4"
-                                    >
-                                        <h2 className="text-xl font-bold">
-                                            Project {project.id}: {project.name}
-                                        </h2>
-
-                                        <div className="text-4xl">{project.icon}</div>
-
-                                        <h3 className="text-lg font-semibold text-white/80">
-                                            {project.title}
-                                        </h3>
-
-                                        <p className="text-sm text-white/70">
-                                            {project.description}
-                                        </p>
-
-                                        <div className="flex flex-wrap gap-2">
-                                            {project.tags.map((tag, index) => (
-                                                <span
-                                                    key={index}
-                                                    className="text-xs bg-orange-400/20 text-orange-200 px-3 py-1 rounded-full"
-                                                >
-              {tag}
-            </span>
-                                            ))}
+                        {showHub && (
+                            <section
+                                className="-mt-10 w-full max-w-6xl mx-auto px-8 py-5 rounded-2xl
+                     bg-black/20 backdrop-blur-md border border-white/10 text-sm text-white leading-relaxed
+                     transition duration-300 ease-out transform-gpu z-40"
+                            >
+                                <div className="max-h-96 overflow-y-auto overflow-x-hidden pr-9 space-y-6">
+                                    {projects.map((project) => (
+                                        <div key={project.id} className="p-6 bg-black/30 text-white rounded-2xl shadow-lg flex flex-col gap-4">
+                                            <h2 className="text-xl font-bold">Project {project.id}: {project.name}</h2>
+                                            <div className="text-4xl">{project.icon}</div>
+                                            <h3 className="text-lg font-semibold text-white/80">{project.title}</h3>
+                                            <p className="text-sm text-white/70">{project.description}</p>
+                                            <div className="flex flex-wrap gap-2">
+                                                {project.tags.map((tag, i) => (
+                                                    <span key={i} className="text-xs bg-orange-400/20 text-orange-200 px-3 py-1 rounded-full">
+                      {tag}
+                    </span>
+                                                ))}
+                                            </div>
+                                            <a href={project.href} className="mt-2 text-sm font-bold text-orange-300 hover:underline">View Project →</a>
                                         </div>
+                                    ))}
 
-                                        <a
-                                            href={project.href}
-                                            className="mt-2 text-sm font-bold text-orange-300 hover:underline"
+                                    <button
+                                        type="button"
+                                        onClick={() => setShowHub(false)}
+                                        className="inline-block py-3 px-6 bg-orange-400 rounded-full text-sm font-bold uppercase tracking-widest hover:scale-90 active:scale-95 transition duration-150"
+                                    >
+                                        back
+                                    </button>
+                                </div>
+                            </section>
+                        )}
+
+                        {/* ABOUT PANEL (mounted only when showAbout === true) */}
+                        {showAbout && (
+                            <section
+                                className="mt-30 w-full  rounded-2xl -mt-10
+                                 bg-black/20 backdrop-blur-md border border-white/10 text-sm text-white leading-relaxed
+                                 transition duration-300 ease-out transform-gpu z-40"
                                         >
-                                            View Project →
-                                        </a>
-                                    </div>
-                                ))}
+                                <div className="max-h-96 overflow-y-auto overflow-x-hidden pr-9 space-y-6">
+                                    <div className="flex flex-col md:flex-row gap-6 items-start">
+                                        <img
+                                            src="/me.jpg"
+                                            alt="About me"
+                                            className="w-32 h-32 md:w-40 md:h-40 rounded-2xl object-cover border border-white/10"
+                                        />
 
-                                <button
-                                    type="button"
-                                    onClick={() => setShowHub(false)}
-                                    className="inline-block py-3 px-6 bg-orange-400 rounded-full text-sm font-bold uppercase tracking-widest hover:scale-90 active:scale-95 transition duration-150"
-                                >
-                                    back
-                                </button>
-                            </div>
-                        </section>
+                                        <div className="space-y-3">
+                                            <h2 className="text-xl font-bold">About Me qwe</h2>
+                                            <p className="text-white/70">I’m Gates Subroto — I build web apps and focus on clean UI, smooth UX, and solid code.</p>
+
+                                            <ul className="list-disc pl-5 space-y-2 text-white/80">
+                                                <li>Frontend: React, Tailwind</li>
+                                                <li>Interests: UI design, animations, performance</li>
+                                                <li>Currently working on: personal portfolio + projects</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <button
+                                        type="button"
+                                        onClick={() => setShowAbout(false)}
+                                        className="inline-block py-3 px-6 bg-orange-400 rounded-full text-sm font-bold uppercase tracking-widest hover:scale-90 active:scale-95 transition duration-150"
+                                    >
+                                        back
+                                    </button>
+                                </div>
+                            </section>
+                        )}
                     </div>
 
 
