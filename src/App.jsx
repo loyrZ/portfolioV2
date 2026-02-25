@@ -126,7 +126,6 @@ export default function App() {
                         <a href="/" className=" text-white uppercase
                         hover:text-orange-400"
                         >Home</a>
-                        <a href="/aboutme" className="text-white uppercase hover:text-orange-400">About Me</a>
                         <button
                             type="button"
                             onClick={() => {
@@ -134,8 +133,7 @@ export default function App() {
                                 setShowHub(false);
                                 setShowMore(false);
                             }}
-                            className={`w-fit mx-auto md:mx-0 inline-block py-3 px-6 bg-orange-400 rounded-full
-                             text-sm font-bold uppercase tracking-widest hover:scale-110 active:scale-95 transition 
+                            className={`text-white uppercase hover:text-orange-400 active:scale-95 transition 
                              duration-150 ${showAbout ? "hidden" : ""} `}
 
                         >
@@ -180,8 +178,13 @@ export default function App() {
                     >
                         <div>
                             <h1 className=" relative text-3xl md:text-[50px] font-black uppercase leading-tight tracking-wider">
-                                {showHub ? "PROJECT HUB" : showMore ?
-                                    "INTRODUCTION" : "HOME PAGE"}
+                                {showAbout
+                                    ? "ABOUT ME"
+                                    : showHub
+                                        ? "PROJECT HUB"
+                                        : showMore
+                                            ? "INTRODUCTION"
+                                            : "HOME PAGE"}
                             </h1>
 
                             {showHub && (
@@ -319,7 +322,7 @@ export default function App() {
                                         />
 
                                         <div className="space-y-3">
-                                            <h2 className="text-xl font-bold">About Me qwe</h2>
+                                            <h2 className="text-xl font-bold">About Me</h2>
                                             <p className="text-white/70">I’m Gates Subroto — I build web apps and focus on clean UI, smooth UX, and solid code.</p>
 
                                             <ul className="list-disc pl-5 space-y-2 text-white/80">
