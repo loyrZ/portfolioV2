@@ -3,8 +3,16 @@ import {useState} from "react";
 import { FaEllipsisH, FaLinkedin, FaInstagram, FaGithub} from "react-icons/fa";
 import "./index.css";
 import { Link } from "react-router-dom";
+import { useEffect, useRef } from "react";
 
 export default function App() {
+    const videoRef = useRef(null);
+
+    useEffect(() => {
+        if (videoRef.current) {
+            videoRef.current.playbackRate = 0.75; // 0.5 = half speed
+        }
+    }, []);
     const[showSearch, setShowSearch] = useState(false);
     const[open, setOpen] = useState(false);
     const [showMore, setShowMore] = useState(false);
@@ -159,13 +167,21 @@ export default function App() {
             <main>
                 <section
                     id="hero"
-                    className={`relative w-full h-screen
-                      bg-[url('/image/hero.jpg')]
-                      bg-center bg-cover bg-no-repeat
-                      flex items-center justify-center            /* <-- items-center here */
-                      transition-all duration-500
-              ${showHub ? "pb-32" : "pb-0"}`}>
-                    <div className="absolute inset-0 bg-black/50" />
+                    className={`relative w-full h-screen flex items-center justify-center overflow-hidden transition-all duration-500
+      ${showHub ? "pb-32" : "pb-0"}`}
+                >
+                    <video
+                        ref={videoRef}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="absolute inset-0 w-full h-full object-cover"
+                    >
+                        <source src="/image/wallpaper.mp4" type="video/mp4" />
+                    </video>
+
+                    <div className="absolute inset-0 bg-black/40"></div>
                     {/* Hero Content */}
                     <div
                         className={`relative container mx-auto max-w-[1200px]
@@ -274,10 +290,10 @@ export default function App() {
                         {showHub && (
                             <section
                                 className="-mt-10 w-full max-w-6xl mx-auto px-8 py-5 rounded-2xl
-                     bg-black/20 backdrop-blur-md border border-white/10 text-sm text-white leading-relaxed
+                     bg-white/5 backdrop-blur-md border border-white/10 text-sm text-white leading-relaxed
                      transition duration-300 ease-out transform-gpu z-40"
                             >
-                                <div className="max-h-96 overflow-y-auto overflow-x-hidden pr-9 space-y-6">
+                                <div className="max-h-[48vh] overflow-y-auto overflow-x-hidden pr-9 space-y-6">
                                     {projects.map((project) => (
                                         <div key={project.id} className="p-6 bg-black/30 text-white rounded-2xl shadow-lg flex flex-col gap-4">
                                             <h2 className="text-xl font-bold">Project {project.id}: {project.name}</h2>
