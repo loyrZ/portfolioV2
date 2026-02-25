@@ -62,6 +62,18 @@ export default function App() {
                 "React", "Tailwind CSS", "NodeJS", "HTML", "yml", "AWS S3", "Bucket"
             ],
             icon: ""
+        },
+        {
+            id: 4,
+            name: "U&I",
+            title: "LOT",
+            href: "/",
+            description:
+                "NDA needed. Contact me.",
+            tags: [
+                "***", "***", "***", "***"
+            ],
+            icon: ""
         }
     ];
 
