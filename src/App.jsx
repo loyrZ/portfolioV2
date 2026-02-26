@@ -233,13 +233,13 @@ export default function App() {
 
 
                         <div className="relative mb-8 max-w-2xl">
-                            {/* BUTTON */}
                             {!showMore && !showHub && !showAbout ? (
                                 <button
                                     type="button"
                                     onClick={() => setShowMore(true)}
                                     className="flex items-center gap-2 text-sm uppercase text-gray-300 hover:text-white
-                                    transition-all duration-300"
+                 transition-all duration-300
+                 mx-auto md:mx-0"
                                 >
                                     <FaEllipsisH size={20} />
                                     read more
@@ -352,16 +352,16 @@ export default function App() {
                                     ${showAbout ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"}
                                   `}
                             >
-                                <div className="relative transition-all duration-300 max-h-[128vh]">
-                                    {/* outer border layer (same shape, slightly different tone) */}
+                                <div className="relative transition-all duration-300 max-h-[258vh]">
                                     <div className="absolute inset-0 rounded-2xl border border-white/10 bg-white/5" />
 
-                                    {/* main card */}
                                     <div className="relative p-6 rounded-2xl border border-white/20 bg-black/30
-                                    text-white shadow-lg flex flex-col md:flex-row gap-6 items-start">
-                                        <div className="w-128 aspect-square">
+                  text-white shadow-lg flex flex-col md:flex-row gap-6
+                  items-center justify-center md:items-center">
+
+                                        <div className="w-[2500px] aspect-square mx-auto md:mx-0">
                                             <img
-                                                src="/image/hero.jpg"
+                                                src="/image/pp3.jpeg"
                                                 alt="About me"
                                                 className="w-full h-full object-cover rounded-2xl border border-white/10"
                                             />
@@ -376,26 +376,66 @@ export default function App() {
                                                       text-white md:flex-row gap-6 items-start
                                                       max-h-[40vh] overflow-y-auto overflow-x-hidden"
                                                                                                 >
-                                                <p className="text-lg text-white/80 leading-relaxed">
-                                                    Hi, I'm Gates, a frontend engineer focused on UI systems,
-                                                    performance and user experience. I have experience with
-                                                    Node.js, MySQL, database management, and deployment, but
-                                                    frontend is where I’m strongest. I care about
-                                                    building interfaces that feel alive — clear layout, thoughtful
-                                                    spacing, consistent typography, and interactions that feel
-                                                    are reactive without being distracting.
+
+                                                <p className={"text-lg text-white/80 leading-relaxed"}>
+                                                    Hi, I’m Gates, a frontend engineer focused on UI systems,
+                                                    performance, and user experience. I try my best to build
+                                                    interfaces that are structured, scalable, and intentional with
+                                                    clear layout and interactions that
+                                                    feel responsive without becoming distracting.
                                                 </p>
 
                                                 <p className="text-lg text-white/80 leading-relaxed">
-                                                    Most of my work is on the frontend using JavaScript, React, and Tailwind, where I build reusable
-                                                    components, scalable design systems, and responsive layouts. I aim to make things easy to understand —
-                                                    if it can be coded, it can be presented clearly.
+                                                    Half of my work centers around JavaScript, React, and Tailwind,
+                                                    where I design multiplying, living component architectures,
+                                                    self-sustaining design systems, and responsive layouts. I care about
+                                                    maintainability as much as aesthetics. If something can be coded,
+                                                    it can be structured clearly, and if it’s structured clearly,
+                                                    people can help give life to it with me.
                                                 </p>
 
                                                 <p className="text-lg text-white/80 leading-relaxed">
-                                                    Right now I’m expanding my portfolio with projects that reflect both engineering discipline and design
-                                                    awareness. I enjoy taking an idea from concept to refinement: wireframe → UI build → motion polish →
-                                                    optimization.
+                                                    While frontend is my strongest discipline, my technical interests
+                                                    extend deeper into how systems operate. I have experience with
+                                                    Node.js, MySQL, database management, and deployment workflows,
+                                                    and I actively seek to understand the infrastructure behind the
+                                                    interfaces. I’m motivated by seeing the bigger picture,
+                                                    how components, services, and data flows connect,
+                                                    and identifying opportunities to improve clarity,
+                                                    efficiency, and performance.
+                                                </p>
+
+                                                <p className="text-lg text-white/80 leading-relaxed">
+                                                    On top of that, I am advancing my knowledge in artificial
+                                                    intelligence and deep learning through graduate-level coursework
+                                                    in Python. I’ve built neural networks from scratch and developed
+                                                    my own models using Tensorflow, Karas, Numpy, and Pandas.
+                                                    I seek ways to strengthen my understanding of how learning systems
+                                                    function internally. Working with machine learning has sharpened my
+                                                    systems thinking, breaking problems down into inputs, experimenting,
+                                                    transforming, optimizing, and measuring outcomes.
+                                                </p>
+
+                                                <p className="text-lg text-white/80 leading-relaxed">
+                                                    Right now, I’m expanding my portfolio with projects that reflect
+                                                    both engineering discipline and design awareness. I enjoy taking
+                                                    an idea from concept to refinement:
+
+                                                </p>
+
+                                                <p>
+                                                    Sketches → UI → interactive design →
+                                                    backend → optimization  → motion polish
+                                                </p>
+
+                                                <p className="text-lg text-white/80 leading-relaxed">
+                                                    Professionally, I am open to IT support or technical services
+                                                    roles to deepen my real-world understanding of operational
+                                                    systems and infrastructure, while also pursuing frontend
+                                                    engineering roles focused on design systems and product UI.
+                                                    My goal is to bridge system-level understanding with
+                                                    interface-level precision, building digital experiences
+                                                    that are both architecturally sound and visually refined.
                                                 </p>
                                             </div>
 
