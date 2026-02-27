@@ -26,7 +26,8 @@ export default function App() {
             title: "City Clips",
             href: "/project1.html",
             description:
-                "Encrypted passwords, real-time chat, uploads, comments.",
+                "Encrypted passwords, real-time chat, uploads, comments. I made all the back-end, I can store data " +
+                "locally or in web servers, depending on availability and needs.",
             tags: ["Full-Stack", "Security", "Realtime", "Frontend", "UI", "JavaScript"],
             icon: ""
         },
@@ -36,7 +37,8 @@ export default function App() {
             title: "Training Neural Network model from scratch",
             href: "/project2.html",
             description:
-                "A graduate CSC course focused in deep learning, creating a neural network from scratch using Notebook, Pandas, TensorFlow, NumPy, Keras. Will be uploaded by 02/26/2026",
+                "A graduate CSC course focused in deep learning, creating a fully connected neural network from scratch using Notebook," +
+                " Pandas, TensorFlow, NumPy, Keras.",
             tags: [
                 "Deep Learning",
                 "Neural Networks",
@@ -271,12 +273,14 @@ export default function App() {
 
                             {/* TEXT */}
                             <div
-                                className={`overflow-y-auto overflow-x-hidden text-xl text-white leading-relaxed 
+                                className={`overflow-y-scroll overflow-x-hidden text-lg text-white leading-relaxed 
                                 transition-all duration-300 ${showMore && !showHub
                                     ? "opacity-100 max-h-80 max-w-2xl translate-y-0"
                                     : "opacity-0 max-h-np0 -translate-y-2 pointer-events-none"}
                                      : "opacity-0 max-h-0 -translate-y-2"}`}
                             >
+                                This site, and all my projects were handcrafted by me, not made by a third party site.
+                                <br /><br />
                                 It started with video games. That curiosity evolved into hardware tinkering,
                                 taking things apart just to understand how they worked.
                                 <br /><br />
