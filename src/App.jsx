@@ -15,6 +15,8 @@ export default function App() {
     const [showMore, setShowMore] = useState(false);
     const [showHub, setShowHub] = useState(false);
     const [showAbout, setShowAbout] = useState(false);
+    const [showTLDRAbout, setShowTLDRAbout] = useState(false);
+
 
 
     const projects = [
@@ -113,6 +115,7 @@ export default function App() {
                                     setShowAbout(false);
                                     setShowMore(false);
                                     setShowHub(false);
+                                    setShowTLDRAbout(false);
                                 }}
                                 className="text-white uppercase hover:text-orange-400"
                             >
@@ -149,6 +152,7 @@ export default function App() {
                                 setShowAbout(false);
                                 setShowMore(false);
                                 setShowHub(false);
+                                setShowTLDRAbout(false);
                             }}
                             className="text-white uppercase hover:text-orange-400"
                         >
@@ -160,12 +164,27 @@ export default function App() {
                                 setShowAbout(true);
                                 setShowHub(false);
                                 setShowMore(false);
+                                setShowTLDRAbout(false);
                             }}
                             className={`text-white uppercase hover:text-orange-400 active:scale-95 transition 
                              duration-150 ${showAbout ? "hidden" : ""} `}
 
                         >
                             About Me
+                        </button>
+                        <button
+                            type="button"
+                            onClick={() => {
+                                setShowAbout(false);
+                                setShowHub(false);
+                                setShowMore(false);
+                                setShowTLDRAbout(true);
+                            }}
+                            className={`text-white uppercase hover:text-orange-400 active:scale-95 transition 
+                             duration-150 ${showTLDRAbout ? "hidden" : ""} `}
+
+                        >
+                            TLDR About Me
                         </button>
                         <a
                             href="mailto:gatessubroto@gmail.com"
@@ -189,7 +208,7 @@ export default function App() {
                     id="hero"
                     className={`relative w-full h-screen flex items-center justify-center overflow-hidden 
                     transition-all duration-1000
-                        ${showHub || showAbout ? "pb-32" : "pb-0"}`} //transition for get started
+                        ${showHub || showAbout || showTLDRAbout? "pb-32" : "pb-0"}`} //transition for get started
                     >
                     <video
                         ref={videoRef}
@@ -209,19 +228,21 @@ export default function App() {
                             text-white md:p-8 xl:p-0
                             flex flex-col justify-center     /* <-- center vertically */
                             transition-all duration-300 ease-out
-                            ${showHub || showAbout ? "-translate-y-0" : "translate-y-0"}
+                            ${showHub || showAbout || showTLDRAbout ? "-translate-y-0" : "translate-y-0"}
                             text-center md:text-left
                            `}
                     >
                         <div>
                             <h1 className=" relative text-3xl md:text-[50px] font-black uppercase leading-tight tracking-wider">
-                                {showAbout
-                                    ? "ABOUT ME"
-                                    : showHub
-                                        ? "PROJECT HUB"
-                                        : showMore
-                                            ? "INTRODUCTION"
-                                            : "HOME PAGE"}
+                                {showTLDRAbout
+                                    ? "TLDR About Me"
+                                    : showAbout
+                                        ? "ABOUT ME"
+                                        : showHub
+                                            ? "PROJECT HUB"
+                                            : showMore
+                                                ? "INTRODUCTION"
+                                                : "HOME PAGE"}
                             </h1>
 
                             {showHub && (
@@ -233,7 +254,7 @@ export default function App() {
 
 
                         <div className="relative mb-8 max-w-2xl">
-                            {!showMore && !showHub && !showAbout ? (
+                            {!showMore && !showHub && !showAbout && !showTLDRAbout ? (
                                 <button
                                     type="button"
                                     onClick={() => setShowMore(true)}
@@ -250,38 +271,37 @@ export default function App() {
 
                             {/* TEXT */}
                             <div
-                                className={`overflow-y-auto overflow-x-hidden text-sm text-white leading-relaxed 
+                                className={`overflow-y-auto overflow-x-hidden text-xl text-white leading-relaxed 
                                 transition-all duration-300 ${showMore && !showHub
                                     ? "opacity-100 max-h-80 max-w-2xl translate-y-0"
-                                    : "opacity-0 max-h-0 -translate-y-2 pointer-events-none"}
+                                    : "opacity-0 max-h-np0 -translate-y-2 pointer-events-none"}
                                      : "opacity-0 max-h-0 -translate-y-2"}`}
                             >
                                 It started with video games. That curiosity evolved into hardware tinkering,
-                                taking things apart just to understand how they worked. I also got
-                                to build a PC my dad funded me and my brothers for.
-                                He gave each of us $1000 to build, the condition was that we had to build it ourselves.
+                                taking things apart just to understand how they worked.
                                 <br /><br />
                                 I tried programming at thirteen and didn’t like it at first. I was more drawn to
-                                art and graphic design. I then was encouraged to give coding another chance, and a few
-                                years later something finally clicked: I didn’t have to choose between creativity and
-                                computer science. I could combine them.
+                                art and graphic design, but I was encouraged to give coding another chance when I was
+                                17, but this time I would combine it with my creativity and computer science.
                                 <br /><br />
                                 To keep pace with a rapidly evolving world, I began studying deep learning,
                                 even building a neural network from scratch to understand the fundamentals.
                                 To nurture my creative side, I work with JavaScript and React, designing
-                                interactive systems that are both functional and expressive.
+                                interactive systems that are functional and expressive. This led into needing to learn
+                                back-end, nodeJS, mySQL, and learning how to host it on the web, as well as in my own
+                                local servers at home.
                                 <br /><br />
                                 I am still catching up in many ways. The field moves exponentially fast, and sometimes
                                 I feel the pressure of not measuring up. But progress matters more than doubt,
-                                so I keep building.
+                                so I keep learning, and I keep building.
                                 <br /><br />
-                                In JavaScript, I enjoy crafting elegant abstractions and scalable systems, sometimes
-                                using modern tools like React, JSX, Tailwind, CSS, Aurora MySQL, for backend I use
+                                In JavaScript, I enjoy crafting elegant abstractions, with the same scalable systems,
+                                 sometimes using modern tools like React,
+                                JSX, Tailwind, CSS, Aurora MySQL, for backend I use
                                 node.js, and Java when academia requires it. My most challenging task so far has been
                                 deep learning with Python, where
-                                mathematics, engineering, and creativity converge, not in the way I once expected,
-                                but in a way that starts to feel natural. The multitude of numbers on the screen no
-                                longer phases me; I have grown comfortable with abstract equations.
+                                mathematics, engineering, and creativity converge, the multitude of numbers on the screen
+                                that I have grown comfortable with over the past few years. It started to feel natural.
                             </div>
                             {/* READ LESS BUTTON */}
                             <button
@@ -289,7 +309,7 @@ export default function App() {
                                 onClick={() => setShowMore(false)}
                                 className={`mt-3 text-sm uppercase text-gray-300 hover:text-white transition-all 
                                 duration-300
-                ${!showMore || showHub
+                                    ${!showMore || showHub
                                     ? "opacity-0 pointer-events-none max-h-0 -translate-y-2 transition-all duration-300"
                                     : "opacity-100 max-h-10 translate-y-0"
                                 }
@@ -304,9 +324,9 @@ export default function App() {
                             onClick={() => setShowHub(true)}
                             className={`w-fit mx-auto md:mx-0 inline-block py-3 px-6 bg-orange-400 rounded-full
                              text-sm font-bold uppercase tracking-widest hover:scale-110 active:scale-95 transition 
-                             duration-150 ${showHub || showAbout ? "hidden" : ""}`}
+                             duration-150 ${showHub || showAbout || showTLDRAbout? "hidden" : ""}`}
                         >
-                            get started
+                            projects
                         </button>
 
                         {showHub && (
@@ -356,14 +376,14 @@ export default function App() {
                                     <div className="absolute inset-0 rounded-2xl border border-white/10 bg-white/5" />
 
                                     <div className="relative p-6 rounded-2xl border border-white/20 bg-black/30
-                  text-white shadow-lg flex flex-col md:flex-row gap-6
-                  items-center justify-center md:items-center">
+                                                      text-white shadow-lg flex flex-col md:flex-row gap-6
+                                                      items-center justify-center md:items-center">
 
                                         <div className="w-[2500px] aspect-square mx-auto md:mx-0">
                                             <img
-                                                src="/image/pp3.jpeg"
+                                                src="/image/pp4.jpeg"
                                                 alt="About me"
-                                                className="w-full h-full object-cover rounded-2xl border border-white/10"
+                                                className="w-full h-full object-cover object-bottom rounded-2xl border border-white/10"
                                             />
                                         </div>
 
@@ -386,23 +406,18 @@ export default function App() {
                                                 </p>
 
                                                 <p className="text-lg text-white/80 leading-relaxed">
-                                                    Half of my work centers around JavaScript, React, and Tailwind,
-                                                    where I design multiplying, living component architectures,
-                                                    self-sustaining design systems, and responsive layouts. I care about
-                                                    maintainability as much as aesthetics. If something can be coded,
+                                                    HALF of my work centers around JavaScript, React, and Tailwind.
+                                                    I put time into maintainability and aesthetics. If something can
+                                                    be coded,
                                                     it can be structured clearly, and if it’s structured clearly,
                                                     people can help give life to it with me.
                                                 </p>
 
                                                 <p className="text-lg text-white/80 leading-relaxed">
-                                                    While frontend is my strongest discipline, my technical interests
-                                                    extend deeper into how systems operate. I have experience with
-                                                    Node.js, MySQL, database management, and deployment workflows,
-                                                    and I actively seek to understand the infrastructure behind the
-                                                    interfaces. I’m motivated by seeing the bigger picture,
-                                                    how components, services, and data flows connect,
-                                                    and identifying opportunities to improve clarity,
-                                                    efficiency, and performance.
+                                                    I have experience with Node.js, MySQL, database management, and
+                                                    deployment workflows by building a full-stack website in cityclipped.com - I’m
+                                                    motivated by learning the bigger picture, how components,
+                                                    services, and data flows connect.
                                                 </p>
 
                                                 <p className="text-lg text-white/80 leading-relaxed">
@@ -437,6 +452,81 @@ export default function App() {
                                                     interface-level precision, building digital experiences
                                                     that are both architecturally sound and visually refined.
                                                 </p>
+                                                <p className="text white/80 leading-relaxed">
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => setShowAbout(false)}
+                                                        className="inline-block py-3 px-6 bg-orange-400 rounded-full text-sm font-bold
+                                         uppercase tracking-widest hover:scale-90 active:scale-95 transition duration-150"
+                                                    >
+                                                        back
+                                                    </button>
+                                                </p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </section>
+                        )}
+
+                        {showTLDRAbout && (
+                            <section
+                                className={`-mt-10 w-full max-w-6xl mx-auto px-8 py-5 rounded-2xl
+                                    bg-white/5 backdrop-blur-md border border-white/10 text-white leading-relaxed
+                                    transform-gpu transition-[opacity,transform] duration-500 ease-out z-40
+                                    ${showTLDRAbout ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"}
+                                  `}
+                            >
+                                <div className="relative transition-all duration-300 max-h-[258vh]">
+                                    <div className="absolute inset-0 rounded-2xl border border-white/10 bg-white/5" />
+
+                                    <div className="relative p-6 rounded-2xl border border-white/20 bg-black/30
+                                                      text-white shadow-lg flex flex-col md:flex-row gap-6
+                                                      items-center justify-center md:items-center">
+
+                                        <div className="w-[400px] aspect-square mx-auto md:mx-0">
+                                            <img
+                                                src="/image/pp4.jpeg"
+                                                alt="About me"
+                                                className="w-full h-full object-cover object-bottom rounded-2xl border border-white/10"
+                                            />
+                                        </div>
+
+
+                                        <div className="space-y-4">
+
+                                            <div
+                                                className="space-y-3 text-white/70 leading-relaxed
+                                                      relative p-6 rounded-2xl border border-white/20 bg-black/10
+                                                      text-white md:flex-row gap-6 items-start
+                                                      max-h-[40vh] overflow-y-auto overflow-x-hidden"
+                                            >
+
+                                                <p className="text-lg text-white/80 leading-relaxed">
+                                                    <strong>Software Development:</strong> Full-Stack JavaScript (Node.js, Express, MySQL), Frontend Development, UI Implementation.
+                                                    <br />
+                                                    <strong>Artificial Intelligence:</strong> Deep Learning, Machine Learning (Graduate Coursework – CSS296S).
+                                                    <br />
+                                                    <strong>IT & Systems:</strong> PC Diagnostics, Hardware Repair, System Setup & Troubleshooting.
+                                                    <br />
+                                                    <strong>Professional Skills:</strong> Fluent English, Clear Communication, Active Listener.
+                                                    <br />
+                                                    <strong>Education:</strong> California State University, Sacramento <strong>Computer Science</strong>
+
+                                                </p>
+
+                                                <p className="text white/80 leading-relaxed">
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => setShowTLDRAbout(false)}
+                                                        className="inline-block py-3 px-6 bg-orange-400 rounded-full text-sm font-bold
+                                         uppercase tracking-widest hover:scale-90 active:scale-95 transition duration-150"
+                                                    >
+                                                        back
+                                                    </button>
+                                                </p>
                                             </div>
 
                                         </div>
@@ -453,16 +543,16 @@ export default function App() {
                         <div className="text-white p-4 flex md:flex-col gap-8 items-center text-2xl">
 
                         <a href="https://github.com/loyrZ" target="_blank" rel="noreferrer">
-                                <FaGithub size={30} className="hover:text-white hover:scale-150 transition" />
+                                <FaGithub size={44} className="hover:text-white hover:scale-150 transition" />
                             </a>
 
                             <a href="https://www.instagram.com/gateshro" target="_blank"
                                rel="noreferrer">
-                                <FaInstagram size={30} className="hover:text-white hover:scale-150 transition" />
+                                <FaInstagram size={44} className="hover:text-white hover:scale-150 transition" />
                             </a>
 
                             <a href="https://www.linkedin.com/in/gates-subroto-4367772aa" target="_blank" rel="noreferrer">
-                                <FaLinkedin size={30} className="hover:text-white hover:scale-150 transition" />
+                                <FaLinkedin size={44} className="hover:text-white hover:scale-150 transition" />
                             </a>
 
                         </div>
