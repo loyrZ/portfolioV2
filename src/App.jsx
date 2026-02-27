@@ -280,10 +280,9 @@ export default function App() {
                                 It started with video games. That curiosity evolved into hardware tinkering,
                                 taking things apart just to understand how they worked.
                                 <br /><br />
-                                In the begining, I was more drawn to
+                                I was more drawn to
                                 art and graphic design, but eventually, I encouraged myself to give coding another
-                                chance when I was
-                                17, but this time I would combine it with my creativity and computer science.
+                                chance when I was 17, but this time I would combine it with my creativity and computer science.
                                 <br /><br />
                                 To keep pace with a rapidly evolving world, I began studying deep learning,
                                 even building a neural network from scratch to understand the fundamentals.
