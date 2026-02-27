@@ -22,8 +22,8 @@ export default function App() {
     const projects = [
         {
             id: 1,
-            name: "Video Streaming Full Stack Development",
-            title: "City Clips",
+            name: "Video Streaming Full Stack Development - Still drawing, Completion: 02/29/2026",
+            title: "City Clipped",
             href: "/project1.html",
             description:
                 "Encrypted passwords, real-time chat, uploads, comments. I made all the back-end, I can store data " +
@@ -33,7 +33,7 @@ export default function App() {
         },
         {
             id: 2,
-            name: "Deep Learning Neural Network",
+            name: "Deep Learning Neural Network - Still drawing, Completion: 02/29/2026",
             title: "Training Neural Network model from scratch",
             href: "/project2.html",
             description:
@@ -50,7 +50,7 @@ export default function App() {
         },
         {
             id: 3,
-            name: "Portfolio",
+            name: "Portfolio - Still drawing, Completion: 02/29/2026",
             title: "React and Tailwind App Portfolio",
             href: "/",
             description:
@@ -62,7 +62,7 @@ export default function App() {
         },
         {
             id: 4,
-            name: "Javascript Game",
+            name: "Javascript Game - Still drawing, Completion: 02/29/2026",
             title: "Davis Discovery",
             href: "/",
             description:
