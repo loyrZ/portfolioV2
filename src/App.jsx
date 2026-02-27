@@ -22,11 +22,11 @@ export default function App() {
     const projects = [
         {
             id: 1,
-            name: "City Clips",
-            title: "Video Streaming Full Stack Development",
+            name: "Video Streaming Full Stack Development",
+            title: "City Clips",
             href: "/project1.html",
             description:
-                "Encrypted passwords, real-time chat, uploads, comments. - Will be uploaded by 02/26/2026",
+                "Encrypted passwords, real-time chat, uploads, comments.",
             tags: ["Full-Stack", "Security", "Realtime", "Frontend", "UI", "JavaScript"],
             icon: ""
         },
@@ -60,13 +60,13 @@ export default function App() {
         },
         {
             id: 4,
-            name: "U&I",
-            title: "LOT",
+            name: "Javascript Game",
+            title: "Davis Discovery",
             href: "/",
             description:
-                "NDA needed. Contact me.",
+                "CS Project for Mister Davis Green",
             tags: [
-                "***", "***", "***", "***"
+                "Javascript", "Art", "HTML", "Game", "CSS"
             ],
             icon: ""
         }
@@ -398,19 +398,16 @@ export default function App() {
                                                                                                 >
 
                                                 <p className={"text-lg text-white/80 leading-relaxed"}>
-                                                    Hi, I’m Gates, a frontend engineer focused on UI systems,
-                                                    performance, and user experience. I try my best to build
-                                                    interfaces that are structured, scalable, and intentional with
-                                                    clear layout and interactions that
-                                                    feel responsive without becoming distracting.
+                                                    I make UI systems, performance, and user experience.
+                                                    I  build interfaces that feel responsive and alive.
                                                 </p>
 
                                                 <p className="text-lg text-white/80 leading-relaxed">
-                                                    HALF of my work centers around JavaScript, React, and Tailwind.
-                                                    I put time into maintainability and aesthetics. If something can
-                                                    be coded,
-                                                    it can be structured clearly, and if it’s structured clearly,
-                                                    people can help give life to it with me.
+                                                    <strong>Software Development:</strong> Full-Stack JavaScript (Node.js, Express, MySQL), Frontend Development, UI Implementation.
+                                                    <br />
+                                                    <strong>Artificial Intelligence:</strong> Deep Learning, Machine Learning (Graduate Coursework – CSS296S).
+                                                    <br />
+                                                    <strong>IT & Systems:</strong> PC Diagnostics, Hardware Repair, System Setup & Troubleshooting.
                                                 </p>
 
                                                 <p className="text-lg text-white/80 leading-relaxed">
@@ -421,7 +418,7 @@ export default function App() {
                                                 </p>
 
                                                 <p className="text-lg text-white/80 leading-relaxed">
-                                                    On top of that, I am advancing my knowledge in artificial
+                                                    I am advancing my knowledge in artificial
                                                     intelligence and deep learning through graduate-level coursework
                                                     in Python. I’ve built neural networks from scratch and developed
                                                     my own models using Tensorflow, Karas, Numpy, and Pandas.
@@ -510,10 +507,7 @@ export default function App() {
                                                     <strong>Artificial Intelligence:</strong> Deep Learning, Machine Learning (Graduate Coursework – CSS296S).
                                                     <br />
                                                     <strong>IT & Systems:</strong> PC Diagnostics, Hardware Repair, System Setup & Troubleshooting.
-                                                    <br />
-                                                    <strong>Professional Skills:</strong> Fluent English, Clear Communication, Active Listener.
-                                                    <br />
-                                                    <strong>Education:</strong> California State University, Sacramento <strong>Computer Science</strong>
+
 
                                                 </p>
 
