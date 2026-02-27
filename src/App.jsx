@@ -279,7 +279,7 @@ export default function App() {
                                     : "opacity-0 max-h-np0 -translate-y-2 pointer-events-none"}
                                      : "opacity-0 max-h-0 -translate-y-2"}`}
                             >
-                                This site, and all my projects were handcrafted by me, not made by a third party site.
+                                This site, and all my projects were handcrafted by myself.
                                 <br /><br />
                                 It started with video games. That curiosity evolved into hardware tinkering,
                                 taking things apart just to understand how they worked.
