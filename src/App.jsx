@@ -71,6 +71,18 @@ export default function App() {
                 "Javascript", "Art", "HTML", "Game", "CSS"
             ],
             icon: ""
+        },
+        {
+            id: 5,
+            name: "Coming Soon",
+            title: "BLS",
+            href: "/",
+            description:
+                "It's pretty cool",
+            tags: [
+                "Life", "Programmed", "Art", "Masterpiece", "Creation"
+            ],
+            icon: ""
         }
     ];
 
