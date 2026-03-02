@@ -172,7 +172,7 @@ export default function App() {
                              duration-150 ${showAbout ? "hidden" : ""} `}
 
                         >
-                            About Me
+                            About
                         </button>
                         <button
                             type="button"
@@ -186,13 +186,13 @@ export default function App() {
                              duration-150 ${showTLDRAbout ? "hidden" : ""} `}
 
                         >
-                            TLDR About Me
+                            Skills
                         </button>
                         <a
                             href="mailto:gatessubroto@gmail.com"
                             className="text-white uppercase hover:text-orange-400"
                         >
-                            Contact
+                            EMAIL
                         </a>
                         {/* Search Btn*/}
 
@@ -237,9 +237,9 @@ export default function App() {
                         <div>
                             <h1 className=" relative text-3xl md:text-[50px] font-black uppercase leading-tight tracking-wider">
                                 {showTLDRAbout
-                                    ? "TLDR About Me"
+                                    ? "SKILLS"
                                     : showAbout
-                                        ? "ABOUT ME"
+                                        ? "ABOUT"
                                         : showHub
                                             ? "PROJECT HUB"
                                             : showMore
@@ -341,7 +341,7 @@ export default function App() {
                                              transition duration-300 ease-out transform-gpu z-40">
                                 <div className="max-h-[48vh] overflow-y-auto overflow-x-hidden pr-9 space-y-6">
                                     {projects.map((project) => (
-                                        <div key={project.id} className="p-6 bg-black/30 text-white rounded-2xl shadow-lg flex flex-col gap-4">
+                                        <div key={project.id} className="p-6 bg-black/40 text-white rounded-2xl shadow-lg flex flex-col gap-4">
                                             <h2 className="text-xl font-bold">Project {project.id}: {project.name}</h2>
                                             <div className="text-4xl">{project.icon}</div>
                                             <h3 className="text-lg font-semibold text-white/80">{project.title}</h3>
@@ -379,17 +379,9 @@ export default function App() {
                                 <div className="relative transition-all duration-300 max-h-[258vh]">
                                     <div className="absolute inset-0 rounded-2xl border border-white/10 bg-white/5" />
 
-                                    <div className="relative p-6 rounded-2xl border border-white/20 bg-black/30
-                                                      text-white shadow-lg flex flex-col md:flex-row gap-6
-                                                      items-center justify-center md:items-center">
 
-                                        <div className="w-[2500px] aspect-square mx-auto md:mx-0">
-                                            <img
-                                                src="/image/pp4.jpeg"
-                                                alt="About me"
-                                                className="w-full h-full object-cover object-bottom rounded-2xl border border-white/10"
-                                            />
-                                        </div>
+
+
 
 
                                         <div className="space-y-4">
@@ -403,7 +395,7 @@ export default function App() {
 
                                                 <p className={"text-lg text-white/80 leading-relaxed"}>
                                                     I make UI systems, performance, and user experience.
-                                                    I  build interfaces that feel responsive and alive.
+                                                    I  build interfaces that feel authentic and clean.
                                                 </p>
 
                                                 <p className="text-lg text-white/80 leading-relaxed">
@@ -465,7 +457,6 @@ export default function App() {
                                                 </p>
                                             </div>
 
-                                        </div>
 
                                     </div>
                                 </div>
@@ -477,7 +468,7 @@ export default function App() {
                                 className={`-mt-10 w-full max-w-6xl mx-auto px-8 py-5 rounded-2xl
                                     bg-white/5 backdrop-blur-md border border-white/10 text-white leading-relaxed
                                     transform-gpu transition-[opacity,transform] duration-500 ease-out z-40
-                                    ${showTLDRAbout ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"}
+                                    
                                   `}
                             >
                                 <div className="relative transition-all duration-300 max-h-[258vh]">
@@ -487,35 +478,21 @@ export default function App() {
                                                       text-white shadow-lg flex flex-col md:flex-row gap-6
                                                       items-center justify-center md:items-center">
 
-                                        <div className="w-[400px] aspect-square mx-auto md:mx-0">
-                                            <img
-                                                src="/image/pp4.jpeg"
-                                                alt="About me"
-                                                className="w-full h-full object-cover object-bottom rounded-2xl border border-white/10"
-                                            />
-                                        </div>
+
 
 
                                         <div className="space-y-4">
 
-                                            <div
-                                                className="space-y-3 text-white/70 leading-relaxed
-                                                      relative p-6 rounded-2xl border border-white/20 bg-black/10
-                                                      text-white md:flex-row gap-6 items-start
-                                                      max-h-[40vh] overflow-y-auto overflow-x-hidden"
-                                            >
+
 
                                                 <p className="text-lg text-white/80 leading-relaxed">
-                                                    <strong>Software Development:</strong> Full-Stack JavaScript (Node.js, Express, MySQL), Frontend Development, UI Implementation.
+                                                    <strong>Software Development:</strong> Full-Stack JavaScript (Node.js, Express, MySQL), Frontend Development,
+                                                    Backend development, UI Implementation.
                                                     <br />
                                                     <strong>Artificial Intelligence:</strong> Deep Learning, Machine Learning (Graduate Coursework – CSS296S).
                                                     <br />
                                                     <strong>IT & Systems:</strong> PC Diagnostics, Hardware Repair, System Setup & Troubleshooting.
-
-
-                                                </p>
-
-                                                <p className="text white/80 leading-relaxed">
+                                                    <br/>
                                                     <button
                                                         type="button"
                                                         onClick={() => setShowTLDRAbout(false)}
@@ -525,12 +502,13 @@ export default function App() {
                                                         back
                                                     </button>
                                                 </p>
-                                            </div>
+
 
                                         </div>
 
                                     </div>
                                 </div>
+
                             </section>
                         )}
                     </div>
