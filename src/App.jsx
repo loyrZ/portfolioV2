@@ -24,7 +24,7 @@ export default function App() {
             id: 1,
             name: "Video Streaming Full Stack Development - Still drawing, Completion: 02/29/2026",
             title: "City Clipped",
-            href: "https://cityclipped.com/project1.html",
+            href: "https://cityclipped.com",
             description:
                 "Encrypted passwords, real-time chat, uploads, comments. I made all the back-end, I can store data " +
                 "locally or in web servers, depending on availability and needs.",
@@ -33,7 +33,7 @@ export default function App() {
         },
         {
             id: 2,
-            name: "Deep Learning Neural Network - Still drawing, Completion: 02/29/2026",
+            name: "Deep Learning Neural Network - Still drawing, Completion: 03/02/2026",
             title: "Training Neural Network model from scratch",
             href: "/project2.html",
             description:
@@ -50,7 +50,7 @@ export default function App() {
         },
         {
             id: 3,
-            name: "Portfolio - Still drawing, Completion: 02/29/2026",
+            name: "Portfolio",
             title: "React and Tailwind App Portfolio",
             href: "/",
             description:
@@ -62,7 +62,7 @@ export default function App() {
         },
         {
             id: 4,
-            name: "Javascript Game - Still drawing, Completion: 02/29/2026",
+            name: "Javascript Game - On Github",
             title: "Davis Discovery",
             href: "/",
             description:
