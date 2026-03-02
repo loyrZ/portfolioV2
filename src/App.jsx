@@ -24,7 +24,7 @@ export default function App() {
             id: 1,
             name: "Video Streaming Full Stack Development - Still drawing, Completion: 02/29/2026",
             title: "City Clipped",
-            href: "/project1.html",
+            href: "https://cityclipped.com/project1.html",
             description:
                 "Encrypted passwords, real-time chat, uploads, comments. I made all the back-end, I can store data " +
                 "locally or in web servers, depending on availability and needs.",
@@ -279,14 +279,14 @@ export default function App() {
                                     : "opacity-0 max-h-np0 -translate-y-2 pointer-events-none"}
                                      : "opacity-0 max-h-0 -translate-y-2"}`}
                             >
-                                This site, and all my projects were handcrafted by myself.
+                                This site, and all my projects were programmed by myself.
                                 <br /><br />
-                                It started with video games. That curiosity evolved into hardware tinkering,
-                                taking things apart just to understand how they worked.
+                                I started my journey with video games. I took things apart just to understand how they
+                                worked, and was never able to build them back together.
                                 <br /><br />
                                 I was more drawn to
-                                art and graphic design, but eventually, I encouraged myself to give coding another
-                                chance when I was 17, but this time I would combine it with my creativity and computer science.
+                                art and graphic design, but eventually, I encouraged myself to code when I was 17,
+                                but this time I would combine it with my creativity and computer science.
                                 <br /><br />
                                 To keep pace with a rapidly evolving world, I began studying deep learning,
                                 even building a neural network from scratch to understand the fundamentals.
