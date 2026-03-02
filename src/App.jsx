@@ -80,7 +80,7 @@ export default function App() {
             description:
                 "It's pretty cool",
             tags: [
-                "Life", "Programmed", "Art", "Masterpiece", "Creation"
+                "Life", "Programmed", "Creation", "Masterpiece", "Art"
             ],
             icon: ""
         }
