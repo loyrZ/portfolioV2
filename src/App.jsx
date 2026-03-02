@@ -393,9 +393,6 @@ export default function App() {
                                                       max-h-[40vh] overflow-y-auto overflow-x-hidden"
                                                                                                 >
 
-                                                <p className={"text-lg text-white/80 leading-relaxed"}>
-                                                </p>
-
                                                 <p className="text-lg text-white/80 leading-relaxed">
                                                     <strong>Software Development:</strong> Full-Stack JavaScript (Node.js, Express, MySQL), Frontend Development, UI Implementation.
                                                     <br />
