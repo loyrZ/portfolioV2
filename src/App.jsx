@@ -394,8 +394,6 @@ export default function App() {
                                                                                                 >
 
                                                 <p className={"text-lg text-white/80 leading-relaxed"}>
-                                                    I make UI systems, performance, and user experience.
-                                                    I  build interfaces that feel authentic and clean.
                                                 </p>
 
                                                 <p className="text-lg text-white/80 leading-relaxed">
