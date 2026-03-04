@@ -311,7 +311,7 @@ export default function App() {
                                 I feel the pressure of not measuring up. But progress matters more than doubt,
                                 so I keep learning, and I keep building. Slow is smooth, and smooth is fast.
                                 <br /><br />
-                                Javascript? My unlimited void. My Malevolent kitchen.
+                                Javascript? My unlimited tomato.
                                 </div>
                             {/* READ LESS BUTTON */}
                             <button
