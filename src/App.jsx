@@ -291,7 +291,7 @@ export default function App() {
                                     : "opacity-0 max-h-np0 -translate-y-2 pointer-events-none"}
                                      : "opacity-0 max-h-0 -translate-y-2"}`}
                             >
-                                This site, and all my projects were programmed by myself.
+                                This site, and all my projects were programmed by myself. I am still drawing.
                                 <br /><br />
                                 I started my journey with video games. I took things apart just to understand how they
                                 worked, and was never able to build them back together.
@@ -300,8 +300,9 @@ export default function App() {
                                 art and graphic design, but eventually, I encouraged myself to code when I was 17,
                                 but this time I would combine it with my creativity and computer science.
                                 <br /><br />
-                                To keep pace with a rapidly evolving world, I began studying deep learning,
-                                even building a neural network from scratch to understand the fundamentals.
+                                To keep pace with a rapidly evolving world, I began studying deep learning (
+                                I have eyes and I can't even see whats going on),
+                                I feel like a blind man traversing through the amazon.
                                 To nurture my creative side, I work with JavaScript and React, designing
                                 interactive systems that are functional and expressive. This led into needing to learn
                                 back-end, nodeJS, mySQL, and learning how to host it on the web, as well as in my own
@@ -311,13 +312,9 @@ export default function App() {
                                 I feel the pressure of not measuring up. But progress matters more than doubt,
                                 so I keep learning, and I keep building.
                                 <br /><br />
-                                In JavaScript, I enjoy crafting elegant abstractions, with the same scalable systems,
-                                 sometimes using modern tools like React,
-                                JSX, Tailwind, CSS, Aurora MySQL, for backend I use
-                                node.js, and Java when academia requires it. My most challenging task so far has been
-                                deep learning with Python, where
-                                mathematics, engineering, and creativity converge, the multitude of numbers on the screen
-                                that I have grown comfortable with over the past few years. It started to feel natural.
+                                Javascript? My unlimited void. My Malevolent kitchen.
+                                <br /><br />
+                                1 Samuel 16:7
                             </div>
                             {/* READ LESS BUTTON */}
                             <button
