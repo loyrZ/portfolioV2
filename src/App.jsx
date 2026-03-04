@@ -301,8 +301,7 @@ export default function App() {
                                 but this time I would combine it with my creativity and computer science.
                                 <br /><br />
                                 To keep pace with a rapidly evolving world, I began studying deep learning (
-                                I have eyes and I can't even see whats going on),
-                                I feel like a blind man traversing through the amazon.
+                                I have eyes and I can't even see whats going on).
                                 To nurture my creative side, I work with JavaScript and React, designing
                                 interactive systems that are functional and expressive. This led into needing to learn
                                 back-end, nodeJS, mySQL, and learning how to host it on the web, as well as in my own
@@ -310,12 +309,10 @@ export default function App() {
                                 <br /><br />
                                 I am still catching up in many ways. The field moves exponentially fast, and sometimes
                                 I feel the pressure of not measuring up. But progress matters more than doubt,
-                                so I keep learning, and I keep building.
+                                so I keep learning, and I keep building. Slow is smooth, and smooth is fast.
                                 <br /><br />
                                 Javascript? My unlimited void. My Malevolent kitchen.
-                                <br /><br />
-                                1 Samuel 16:7
-                            </div>
+                                </div>
                             {/* READ LESS BUTTON */}
                             <button
                                 type="button"
