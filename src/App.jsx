@@ -33,7 +33,7 @@ export default function App() {
         },
         {
             id: 2,
-            name: "Deep Learning Neural Network - Still drawing, Completion: 03/02/2026",
+            name: "Deep Learning Neural Network - Still drawing",
             title: "Training Neural Network model from scratch",
             href: "/",
             description:
