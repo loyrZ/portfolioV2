@@ -297,11 +297,11 @@ export default function App() {
 
                                 <br /><br />
 
-                                I started my journey with video games. I took things apart just to understand how they worked, and was never able to build them back together.
+                                I started my journey with video games, and remote-controlled toy cars. I took things apart just to understand how they worked, and unfortunately was never able to build them back together.
 
                                 <br /><br />
 
-                                I was more drawn to art and graphic design, but I somehow encouraged myself to code when I was 17. I would combine it with my creativity, or draw my creativity through code.
+                                I encouraged myself to code when I was 17. I would combine it with my creativity, or try to draw my creativity through code.
 
                                 <br /><br />
 
