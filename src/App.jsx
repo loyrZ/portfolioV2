@@ -291,28 +291,33 @@ export default function App() {
                                     : "opacity-0 max-h-np0 -translate-y-2 pointer-events-none"}
                                      : "opacity-0 max-h-0 -translate-y-2"}`}
                             >
-                                This site, and all my projects were programmed by myself. I am still drawing.
+                                Hi, I'm Gates!
                                 <br /><br />
-                                I started my journey with video games. I took things apart just to understand how they
-                                worked, and was never able to build them back together.
+                                I am an artist. I draw my art through programming. As hard as it was, Project 5 (not released) has proven that my art will be alive. This site, and all my projects, were drawn by myself.
+
                                 <br /><br />
-                                I was more drawn to
-                                art and graphic design, but eventually, I encouraged myself to code when I was 17,
-                                but this time I would combine it with my creativity and computer science.
+
+                                I started my journey with video games. I took things apart just to understand how they worked, and was never able to build them back together.
+
                                 <br /><br />
-                                To keep pace with a rapidly evolving world, I began studying deep learning (
-                                I have eyes and I can't even see whats going on).
-                                To nurture my creative side, I work with JavaScript and React, designing
-                                interactive systems that are functional and expressive. This led into needing to learn
-                                back-end, nodeJS, mySQL, and learning how to host it on the web, as well as in my own
-                                local servers at home.
+
+                                I was more drawn to art and graphic design, but I somehow encouraged myself to code when I was 17. I would combine it with my creativity, or draw my creativity through code.
+
                                 <br /><br />
-                                I am still catching up in many ways. The field moves exponentially fast, and sometimes
-                                I feel the pressure of not measuring up. But progress matters more than doubt,
-                                so I keep learning, and I keep building. Slow is smooth, and smooth is fast.
+
+                                I am great at JavaScript. This language is the artist's playground — anything you can think of, you can code very easily. This website was designed to not scroll, as scrolling a website always makes me feel like I'm lost. So it was made with React and Vite, where everything on the website can be accessed through the buttons here.
+
                                 <br /><br />
-                                Javascript? My unlimited tomato.
-                                </div>
+
+                                I am still catching up in many ways. The field of computer science moves exponentially fast, especially with AI, and sometimes I feel the pressure of not measuring up. But progress matters more than doubt, so I keep learning and I keep building. Slow is smooth, and smooth is fast.
+
+                                <br /><br />
+
+                                JavaScript is where I excel. Any task thrown at me and I'll be able to figure it out down to the nitty-gritty detail.
+                                <br /><br />
+
+                                Email: gatessubroto@gmail.com - or you can click the button on the top-right side and it should open your mail inbox with my email attached.
+                            </div>
                             {/* READ LESS BUTTON */}
                             <button
                                 type="button"
