@@ -22,7 +22,7 @@ export default function App() {
     const projects = [
         {
             id: 1,
-            name: "Video Streaming Full Stack Development",
+            name: "Video Streaming Full Stack Development and back-end training ground",
             title: "City Clipped",
             href: "https://cityclipped.com",
             description:
@@ -443,13 +443,12 @@ export default function App() {
                                                 </p>
 
                                                 <p className="text-lg text-white/80 leading-relaxed">
-                                                    Professionally, I am open to IT support or technical services
+                                                    I am open to software engineering with Javascript, C++, Python, back-end, IT support or technical services
                                                     roles to deepen my real-world understanding of operational
                                                     systems and infrastructure, while also pursuing frontend
                                                     engineering roles focused on design systems and product UI.
                                                     My goal is to bridge system-level understanding with
-                                                    interface-level precision, building digital experiences
-                                                    that are both architecturally sound and visually refined.
+                                                    interface-level precision, building UI that flows like particles.
                                                 </p>
                                                 <p className="text white/80 leading-relaxed">
                                                     <button
