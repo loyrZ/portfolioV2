@@ -293,7 +293,7 @@ export default function App() {
                             >
                                 Hi, I'm Gates!
                                 <br /><br />
-                                I am an artist. I draw my art through programming. As hard as it was, Project 5 (not released) has proven that my art will be alive. This site, and all my projects, were drawn by myself.
+                                I like to consider myself an artist. I draw my art through programming. I pretty much build programs that draw for me. This site, and all my projects, were drawn by myself.
 
                                 <br /><br />
 
