@@ -1,5 +1,5 @@
 import {useState} from "react";
-import { FaEllipsisH, FaLinkedin, FaInstagram, FaGithub} from "react-icons/fa";
+import { FaEllipsisH, FaLinkedin, FaGithub} from "react-icons/fa";
 import "./index.css";
 import { useEffect, useRef } from "react";
 
@@ -518,10 +518,6 @@ export default function App() {
                                 <FaGithub size={44} className="hover:text-white hover:scale-150 transition" />
                             </a>
 
-                            <a href="https://www.instagram.com/gateshro" target="_blank"
-                               rel="noreferrer">
-                                <FaInstagram size={44} className="hover:text-white hover:scale-150 transition" />
-                            </a>
 
                             <a href="https://www.linkedin.com/in/gates-subroto-4367772aa" target="_blank" rel="noreferrer">
                                 <FaLinkedin size={44} className="hover:text-white hover:scale-150 transition" />
