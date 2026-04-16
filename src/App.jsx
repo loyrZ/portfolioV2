@@ -73,19 +73,6 @@ export default function App() {
             ],
             icon: ""
         },
-        {
-            id: 5,
-            name: "Coming Soon",
-            title: "UUU",
-            href: "/",
-            description:
-                "It's a UI made with javascript draw and a lot of databases, able to be used for anything. It's not the conventional " +
-                "HTML or REACT. email me at gatessubroto@gmail.com for more details :D",
-            tags: [
-                "Weaving", "Data", "Together"
-            ],
-            icon: ""
-        }
     ];
 
     return (
@@ -98,7 +85,7 @@ export default function App() {
 
                     {/* Logo */}
                     <a className="text-2xl" href="#">
-                        GATES <strong>SUBROTO</strong>
+                        GATES
                     </a>
 
 
