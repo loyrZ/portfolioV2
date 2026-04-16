@@ -23,22 +23,23 @@ export default function App() {
         {
             id: 1,
             name: "Video Streaming Full Stack Development and back-end training ground",
-            title: "City Clipped",
-            href: "https://cityclipped.com",
+            title: "Youtube DEMO",
+            href: "https://youtu.be/9DAlimFigeI",
             description:
-                "Encrypted passwords, real-time chat, uploads, comments. I made all the back-end, I can store data " +
-                "locally or in web servers, depending on availability and needs.",
+                "Encrypted passwords, uploads, comments, delete, " +
+                "locally or in web servers, depending on availability and needs. Used Node.js for backend",
             tags: ["Full-Stack", "Security", "Realtime", "Frontend", "UI", "JavaScript"],
             icon: ""
         },
         {
             id: 2,
-            name: "Deep Learning Neural Network - Still drawing",
+            name: "Deep Learning Neural Network - Still attending",
             title: "Training Neural Network model from scratch",
             href: "/",
             description:
-                "A graduate CSC course focused in deep learning, creating a fully connected neural network from scratch using Notebook," +
-                " Pandas, TensorFlow, NumPy, Keras.",
+                "A graduate CS course focused in deep learning, creating a fully connected neural network from scratch using Notebook," +
+                " Pandas, TensorFlow, NumPy, Keras." +
+                "Creating a health booster AI for final project, estimated completion date May 12th",
             tags: [
                 "Deep Learning",
                 "Neural Networks",
@@ -75,12 +76,13 @@ export default function App() {
         {
             id: 5,
             name: "Coming Soon",
-            title: "BLS",
+            title: "UUU",
             href: "/",
             description:
-                "It's pretty cool",
+                "It's a UI made with javascript draw and a lot of databases, able to be used for anything. It's not the conventional " +
+                "HTML or REACT. email me at gatessubroto@gmail.com for more details :D",
             tags: [
-                "Life", "Programmed", "Creation", "Masterpiece", "Art"
+                "Weaving", "Data", "Together"
             ],
             icon: ""
         }
@@ -291,13 +293,7 @@ export default function App() {
                                     : "opacity-0 max-h-np0 -translate-y-2 pointer-events-none"}
                                      : "opacity-0 max-h-0 -translate-y-2"}`}
                             >
-                                Hi, I'm Gates!
-                                <br /><br />
-                                I like to consider myself an artist. I draw my art through programming. I pretty much build programs that draw for me. This site, and all my projects, were drawn by myself.
-
-                                <br /><br />
-
-                                I started my journey with video games, and remote-controlled toy cars. I took things apart just to understand how they worked, and unfortunately was never able to build them back together.
+                                I'm a CS student at CSUS based in Sacramento, able to relocate within the next few months.
 
                                 <br /><br />
 
@@ -305,18 +301,13 @@ export default function App() {
 
                                 <br /><br />
 
-                                I am great at JavaScript. This language is the artist's playground — anything you can think of, you can code very easily. This website was designed to not scroll, as scrolling a website always makes me feel like I'm lost. So it was made with React and Vite, where everything on the website can be accessed through the buttons here.
+                                My best langauge is JavaScript. This website was designed to not scroll. It's made with React and Vite, where everything on the website can be accessed through the buttons here.
 
                                 <br /><br />
 
-                                I am still catching up in many ways. The field of computer science moves exponentially fast, especially with AI, and sometimes I feel the pressure of not measuring up. But progress matters more than doubt, so I keep learning and I keep building. Slow is smooth, and smooth is fast.
-
+                                Node.js, mySQL, Python, Java, C++ are other languages I have experience with.
                                 <br /><br />
 
-                                JavaScript is where I excel. Any task thrown at me and I'll be able to figure it out down to the nitty-gritty detail.
-                                <br /><br />
-
-                                Email: gatessubroto@gmail.com - or you can click the button on the top-right side and it should open your mail inbox with my email attached.
                             </div>
                             {/* READ LESS BUTTON */}
                             <button
