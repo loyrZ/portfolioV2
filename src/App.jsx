@@ -33,13 +33,32 @@ export default function App() {
         },
         {
             id: 2,
+            name: "Social Impact Data Analytics Project",
+            title: "Fair-Lending Disparity Analysis Tool",
+            href: "/",
+            description:
+                "An interactive web tool that surfaces approval-rate disparities across demographic groups in loan application data. " +
+                "Users can filter by race, credit score band, zip code, and loan amount to detect potential disparate impact under the four-fifths rule (HMDA framework). " +
+                "Built with Node.js, Express, and Chart.js, with synthetic loan data stored in Excel sheets to mirror real fair-lending workflows.",
+            tags: [
+                "Data Analytics",
+                "Fair Lending",
+                "HMDA",
+                "Node.js",
+                "Express",
+                "Chart.js"
+            ],
+            icon: ""
+        },
+        {
+            id: 3,
             name: "Deep Learning Neural Network - Still attending",
             title: "Training Neural Network model from scratch",
             href: "/",
             description:
                 "A graduate CS course focused in deep learning, creating a fully connected neural network from scratch using Notebook," +
                 " Pandas, TensorFlow, NumPy, Keras." +
-                "Creating a health booster AI for final project, estimated completion date May 12th",
+                "Creating a vitality booster AI for final project, estimated completion date May 12th",
             tags: [
                 "Deep Learning",
                 "Neural Networks",
@@ -50,7 +69,7 @@ export default function App() {
             icon: ""
         },
         {
-            id: 3,
+            id: 4,
             name: "Portfolio",
             title: "React and Tailwind App Portfolio",
             href: "https://www.github.com/loyrZ",
@@ -62,7 +81,7 @@ export default function App() {
             icon: ""
         },
         {
-            id: 4,
+            id: 5,
             name: "Javascript Game - On Github",
             title: "Davis Discovery",
             href: "https://www.github.com/loyrZ",
