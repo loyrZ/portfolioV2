@@ -36,13 +36,12 @@ export default function App() {
             id: 2,
             name: "Social Impact Data Analytics Project",
             title: "Fair-Lending Disparity Analysis Tool",
-            href: "/",
+            href: "/https://travis-cu-fair-lending-production.up.railway.app",
             description:
-                "An interactive web tool that surfaces approval-rate disparities across demographic groups in loan application data. " +
-                "Users filter by race, credit score band, zip code, and loan amount to detect potential disparate impact under the four-fifths rule (HMDA framework). " +
-                "Built with Node.js, Express, MySQL, and Chart.js. Synthetic loan data flows from Excel through an ETL pipeline into a queryable database, mirroring real fair-lending analyst workflows. " +
-                "Trained on around 5,000 generated candidate records so users can explore the balances and imbalances in lending decisions. " +
-                "In active development, deploying late April 2026.",
+                "An interactive web tool that surfaces lending patterns across demographic groups in real Travis Credit Union 2024 HMDA loan applications, sourced directly from the CFPB. " +
+                "Users filter by race, ethnicity, age, loan purpose, county, and more — grouping and aggregating across six metrics to support fair-lending analysis under the HMDA framework. " +
+                "Built with Node.js, Express, MySQL, and Chart.js. ETL pipeline ingests real CFPB Modified LAR data, decodes HMDA codes into readable values, and loads into a queryable analytical schema mirroring fair-lending analyst workflows. " +
+                "Deployed April 2026. Roadmap: Census ACS demographic comparison (v2), interactive Leaflet map of service-area lending patterns (v3).",
             tags: [
                 "Data Analytics",
                 "Fair Lending",
