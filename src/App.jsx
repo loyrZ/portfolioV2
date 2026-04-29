@@ -56,24 +56,52 @@ export default function App() {
         },
         {
             id: 3,
-            name: "Deep Learning Neural Network - Still attending",
-            title: "Training Neural Network model from scratch",
+            name: "Smart Chatbot - In Progress",
+            title: "Claude-Powered Chatbot with React + Express",
             href: "/",
             description:
-                "A graduate CS course focused in deep learning, creating a fully connected neural network from scratch using Notebook," +
-                " Pandas, TensorFlow, NumPy, Keras." +
-                "Creating a vitality booster AI for final project, estimated completion date May 12th",
+                "Lightweight full-stack chatbot built on Anthropic's Claude API. React + Vite frontend talks to a Node.js + " +
+                "Express backend that handles API calls and keeps secrets server-side. Stateless v1 design — each message is a " +
+                "fresh API call, no database required. Deployed on Render/Vercel.",
             tags: [
-                "Deep Learning",
-                "Neural Networks",
-                "Machine Learning",
-                "Artificial Intelligence",
-                "Supervised Learning"
+                "React",
+                "Vite",
+                "Node.js",
+                "Express",
+                "Claude API",
+                "Anthropic",
+                "Full Stack",
+                "JavaScript"
             ],
             icon: ""
         },
         {
             id: 4,
+            name: "Deep Learning Wellbeing Predictor - In Progress",
+            title: "Beyond Calories: Predicting Self-Reported Wellbeing from Eating and Lifestyle Patterns",
+            href: "/",
+            description:
+                "Graduate deep learning final project (CSC 296S, Spring 2026). Predicts self-reported general health on a " +
+                "5-class scale from eating, exercise, sleep, and demographic features using the BLS American Time Use Survey " +
+                "Eating and Health Module (~11,000 respondents). Compares three architectures under matched parameter budgets: " +
+                "a fully-connected baseline, an auto-encoder plus classifier head, and a small Transformer encoder that treats " +
+                "each feature as a token. Evaluation includes accuracy, macro-F1, per-class metrics, confusion matrices, and " +
+                "a derived ROC analysis on a binary good-vs-not-good health task. Estimated completion May 12th.",
+            tags: [
+                "Deep Learning",
+                "Neural Networks",
+                "Transformers",
+                "Auto-Encoders",
+                "Tabular Data",
+                "TensorFlow",
+                "Keras",
+                "Pandas",
+                "NumPy"
+            ],
+            icon: ""
+        },
+        {
+            id: 5,
             name: "Portfolio",
             title: "React and Tailwind App Portfolio",
             href: "https://www.github.com/loyrZ",
@@ -85,7 +113,7 @@ export default function App() {
             icon: ""
         },
         {
-            id: 5,
+            id: 6,
             name: "Javascript Game - On Github",
             title: "Davis Discovery",
             href: "https://www.github.com/loyrZ",
