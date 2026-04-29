@@ -352,8 +352,14 @@ export default function App() {
                                                     <span key={i} className="text-xs bg-orange-400/20
                                                     text-orange-200 px-3 py-1 rounded-full">{tag}</span>))}
                                             </div>
-                                            <a href={project.href} className="mt-2 text-sm font-bold text-orange-300 hover:underline">View Project →</a>
-                                        </div>
+                                            <a
+                                                href={project.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="mt-2 text-sm font-bold text-orange-300 hover:underline"
+                                            >
+                                                View Project →
+                                            </a>                                        </div>
                                     ))}
 
                                     <button
