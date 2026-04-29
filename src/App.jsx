@@ -22,13 +22,14 @@ export default function App() {
     const projects = [
         {
             id: 1,
-            name: "Video Streaming Full Stack Development and back-end training ground",
-            title: "Youtube DEMO",
+            name: "Full-stack video platform, backend training ground",
+            title: "YouTube Demo",
             href: "https://youtu.be/9DAlimFigeI",
             description:
-                "Encrypted passwords, uploads, comments, delete, " +
-                "locally or in web servers, depending on availability and needs. Used Node.js for backend",
-            tags: ["Full-Stack", "Security", "Realtime", "Frontend", "UI", "JavaScript"],
+                "Full-stack video platform with encrypted passwords, uploads, comments, and delete functionality. " +
+                "Built with Node.js on the backend. Runs locally or on a web server. " +
+                "Deploying early May with limited upload capacity. Source code for the latest version is private.",
+            tags: ["Full-Stack", "Node.js", "Auth", "JavaScript", "UI"],
             icon: ""
         },
         {
@@ -39,8 +40,9 @@ export default function App() {
             description:
                 "An interactive web tool that surfaces approval-rate disparities across demographic groups in loan application data. " +
                 "Users filter by race, credit score band, zip code, and loan amount to detect potential disparate impact under the four-fifths rule (HMDA framework). " +
-                "Built with Node.js, Express, MySQL, and Chart.js — synthetic loan data flows from Excel through an ETL pipeline into a queryable database, mirroring real fair-lending analyst workflows. " +
-                "In active development, deploying April 29 2026, or 11:59PM April 28 2026 - Hiring manager please give me some time.",
+                "Built with Node.js, Express, MySQL, and Chart.js. Synthetic loan data flows from Excel through an ETL pipeline into a queryable database, mirroring real fair-lending analyst workflows. " +
+                "Trained on around 5,000 generated candidate records so users can explore the balances and imbalances in lending decisions. " +
+                "In active development, deploying late April 2026.",
             tags: [
                 "Data Analytics",
                 "Fair Lending",
