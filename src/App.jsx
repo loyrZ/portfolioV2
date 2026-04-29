@@ -56,6 +56,34 @@ export default function App() {
         },
         {
             id: 3,
+            name: "DentalBot - In Progress",
+            title: "AI Dental Insurance Coverage Assistant",
+            href: "/",
+            description:
+                "Full-stack proof-of-concept that answers plain-English dental insurance questions (\"Is a root canal " +
+                "covered? What's my deductible?\") using an LLM grounded in a plan document. Java + Spring Boot REST " +
+                "backend exposes typed JSON endpoints; Angular frontend provides a chat UI consuming the backend via " +
+                "HttpClient and Observables. OpenAI integration uses system-prompt knowledge injection from a plan " +
+                "document. Containerized with Docker (multi-stage Angular build, separate Spring Boot service) and " +
+                "orchestrated with docker-compose. Applied the factory pattern for response formatting and OOP design " +
+                "across services.",
+            tags: [
+                "Java",
+                "Spring Boot",
+                "REST API",
+                "Angular",
+                "TypeScript",
+                "OpenAI API",
+                "Docker",
+                "docker-compose",
+                "Nginx",
+                "Design Patterns",
+                "Full Stack"
+            ],
+            icon: ""
+        },
+        {
+            id: 4,
             name: "Smart Chatbot - In Progress",
             title: "Claude-Powered Chatbot with React + Express",
             href: "/",
@@ -76,7 +104,7 @@ export default function App() {
             icon: ""
         },
         {
-            id: 4,
+            id: 5,
             name: "Deep Learning Wellbeing Predictor - In Progress",
             title: "Beyond Calories: Predicting Self-Reported Wellbeing from Eating and Lifestyle Patterns",
             href: "/",
@@ -101,7 +129,7 @@ export default function App() {
             icon: ""
         },
         {
-            id: 5,
+            id: 6,
             name: "Portfolio",
             title: "React and Tailwind App Portfolio",
             href: "https://www.github.com/loyrZ",
@@ -113,7 +141,7 @@ export default function App() {
             icon: ""
         },
         {
-            id: 6,
+            id: 7,
             name: "Javascript Game - On Github",
             title: "Davis Discovery",
             href: "https://www.github.com/loyrZ",
