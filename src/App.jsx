@@ -38,14 +38,17 @@ export default function App() {
             href: "/",
             description:
                 "An interactive web tool that surfaces approval-rate disparities across demographic groups in loan application data. " +
-                "Users can filter by race, credit score band, zip code, and loan amount to detect potential disparate impact under the four-fifths rule (HMDA framework). " +
-                "Built with Node.js, Express, and Chart.js, with synthetic loan data stored in Excel sheets to mirror real fair-lending workflows.",
+                "Users filter by race, credit score band, zip code, and loan amount to detect potential disparate impact under the four-fifths rule (HMDA framework). " +
+                "Built with Node.js, Express, MySQL, and Chart.js — synthetic loan data flows from Excel through an ETL pipeline into a queryable database, mirroring real fair-lending analyst workflows. " +
+                "In active development, deploying April 29 2026, or 11:59PM April 28 2026 - Hiring manager please give me some time.",
             tags: [
                 "Data Analytics",
                 "Fair Lending",
                 "HMDA",
+                "SQL",
                 "Node.js",
                 "Express",
+                "ETL",
                 "Chart.js"
             ],
             icon: ""
@@ -299,21 +302,10 @@ export default function App() {
                                     : "opacity-0 max-h-np0 -translate-y-2 pointer-events-none"}
                                      : "opacity-0 max-h-0 -translate-y-2"}`}
                             >
-                                I'm a CS student at CSUS based in Sacramento, able to relocate within the next few months.
-
-                                <br /><br />
-
-                                I encouraged myself to code when I was 17. I would combine it with my creativity, or try to draw my creativity through code.
-
-                                <br /><br />
-
-                                My best langauge is JavaScript. This website was designed to not scroll. It's made with React and Vite, where everything on the website can be accessed through the buttons here.
-
-                                <br /><br />
-
-                                Node.js, mySQL, Python, Java, C++ are other languages I have experience with.
-                                <br /><br />
-
+                                I'm a CS student at CSUS based in Sacramento and open to relocating in the next few months.
+                                I started teaching myself to code at 17 with codeacademy, drawn to it as a way to channel my creativity — building things that feel as much like art as they do software.
+                                JavaScript is my strongest language. This site is built with React and Vite, designed as a single-screen experience where everything is accessed through the buttons above (no scrolling).
+                                I also work with Node.js, MySQL, Python, Java, and C++.
                             </div>
                             {/* READ LESS BUTTON */}
                             <button
@@ -404,48 +396,34 @@ export default function App() {
                                                 <p className="text-lg text-white/80 leading-relaxed">
                                                     <strong>Software Development:</strong> Full-Stack JavaScript (Node.js, Express, MySQL), Frontend Development, UI Implementation.
                                                     <br />
-                                                    <strong>Artificial Intelligence:</strong> Deep Learning, Machine Learning (Graduate Coursework – CSS296S).
+                                                    <strong>Artificial Intelligence:</strong> Deep Learning, Machine Learning (Graduate Coursework, CSS296S).
                                                     <br />
                                                     <strong>IT & Systems:</strong> PC Diagnostics, Hardware Repair, System Setup & Troubleshooting.
                                                 </p>
 
                                                 <p className="text-lg text-white/80 leading-relaxed">
-                                                    I have experience with Node.js, MySQL, database management, and
-                                                    deployment workflows by building a full-stack website in cityclipped.com - I’m
-                                                    motivated by learning the bigger picture, how components,
-                                                    services, and data flows connect.
+                                                    I picked up Node.js, MySQL, database management, and deployment by building a full-stack site,
+                                                    I like learning the bigger picture, how components, services, and data flows connect.
                                                 </p>
 
                                                 <p className="text-lg text-white/80 leading-relaxed">
-                                                    I am advancing my knowledge in artificial
-                                                    intelligence and deep learning through graduate-level coursework
-                                                    in Python. I’ve built neural networks from scratch and developed
-                                                    my own models using Tensorflow, Karas, Numpy, and Pandas.
-                                                    I seek ways to strengthen my understanding of how learning systems
-                                                    function internally. Working with machine learning has sharpened my
-                                                    systems thinking, breaking problems down into inputs, experimenting,
-                                                    transforming, optimizing, and measuring outcomes.
+                                                    I'm taking graduate coursework in AI and deep learning, all in Python. I've built neural networks from scratch and made my own models with TensorFlow, Keras, NumPy, and Pandas. I want to know how learning systems actually work inside, not just how to use them. Machine learning has helped me think in systems: breaking problems into inputs, testing, transforming, optimizing, then checking results.
                                                 </p>
 
                                                 <p className="text-lg text-white/80 leading-relaxed">
-                                                    Right now, I’m expanding my portfolio with projects that reflect
-                                                    both engineering discipline and design awareness. I enjoy taking
-                                                    an idea from concept to refinement:
-
+                                                    Right now I'm building out my portfolio with projects that show both engineering and design. I like taking an idea from rough to refined:
                                                 </p>
 
-                                                <p>
-                                                    Sketches → UI → interactive design →
-                                                    backend → optimization  → motion polish
+                                                <p className="font-mono text-white/70 tracking-wide">
+                                                    Sketches → UI → interactive design → backend → optimization → motion polish
                                                 </p>
 
                                                 <p className="text-lg text-white/80 leading-relaxed">
-                                                    I am open to software engineering with Javascript, C++, Python, back-end, IT support or technical services
-                                                    roles to deepen my real-world understanding of operational
-                                                    systems and infrastructure, while also pursuing frontend
-                                                    engineering roles focused on design systems and product UI.
-                                                    My goal is to bridge system-level understanding with
-                                                    interface-level precision, building UI that flows like particles.
+                                                    I'm open to a lot: software engineering in JavaScript, C++, or Python, backend work, IT or technical services to learn how real infrastructure runs, or frontend roles focused on design systems and product UI.
+                                                </p>
+
+                                                <p className="text-lg text-white/80 leading-relaxed">
+                                                    My goal is to bridge system-level thinking with interface-level precision, building UI that flows like particles.
                                                 </p>
                                                 <p className="text white/80 leading-relaxed">
                                                     <button
@@ -473,39 +451,65 @@ export default function App() {
                                     
                                   `}
                             >
-                                <div className="relative transition-all duration-300 max-h-[258vh]">
+                                <div className="relative transition-all duration-300 max-h-[60vh]">
                                     <div className="absolute inset-0 rounded-2xl border border-white/10 bg-white/5" />
 
                                     <div className="relative p-6 rounded-2xl border border-white/20 bg-black/30
-                                                      text-white shadow-lg flex flex-col md:flex-row gap-6
-                                                      items-center justify-center md:items-center">
+                    text-white shadow-lg flex flex-col gap-6
+                    max-h-[50vh] overflow-y-auto
+                    scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent">
 
+                                        <div className="space-y-3 text-white/80 leading-relaxed">
+                                            <p>
+                                                <strong className="text-white">Languages:</strong> JavaScript, TypeScript, Python, Java, C, C++, SQL, HTML5, CSS3
+                                            </p>
+                                            <p>
+                                                <strong className="text-white">Frameworks:</strong> React, Node.js, Express, TensorFlow, Keras, NumPy, Pandas, jQuery, Bootstrap, OpenGL
+                                            </p>
+                                            <p>
+                                                <strong className="text-white">Databases:</strong> MySQL, AWS Aurora, relational design, SQL querying
+                                            </p>
+                                            <p>
+                                                <strong className="text-white">Cloud & DevOps:</strong> AWS EC2, Git, GitHub, branching, pull requests, code review
+                                            </p>
+                                            <p>
+                                                <strong className="text-white">AI / ML:</strong> Neural networks, model training and evaluation, graduate Deep Learning coursework (CSS296S)
+                                            </p>
+                                            <p>
+                                                <strong className="text-white">Practices:</strong> Agile (sprints, standups, retros), full SDLC, unit and integration testing, technical documentation, peer review
+                                            </p>
+                                            <p>
+                                                <strong className="text-white">IT & Networking:</strong> Desktop support, ticketing, imaging and deployment, hardware troubleshooting, TCP/IP, 802.11, LAN/router config, asset management
+                                            </p>
+                                            <p>
+                                                <strong className="text-white">Operating Systems:</strong> Windows (7, 8, 10, Server), macOS, Linux
+                                            </p>
+                                            <p>
+                                                <strong className="text-white">Tools:</strong> VS Code, WebStorm, Jupyter, WordPress, Squarespace, Adobe Creative Cloud
+                                            </p>
+                                        </div>
 
+                                        <div className="space-y-3 text-white/80 leading-relaxed pt-2 border-t border-white/10">
+                                            <p className="text-white font-semibold pt-3">Things I've built</p>
+                                            <p><strong className="text-white">UUU</strong>, patent-pending UI system, sole inventor</p>
+                                            <p><strong className="text-white">Historical Map</strong>, deployed full-stack web app</p>
+                                            <p><strong className="text-white">Mock YouTube</strong>, full-stack video platform</p>
+                                            <p><strong className="text-white">MyDavis Educational Game</strong>, Agile team project</p>
+                                            <p><strong className="text-white">ML Health App</strong>, neural networks, in progress</p>
+                                            <p><strong className="text-white">This portfolio</strong>, React + TypeScript, no scroll</p>
+                                            <p><strong className="text-white">Custom PC build</strong></p>
+                                            <p><strong className="text-white">IT support</strong> for a 30-person office</p>
+                                        </div>
 
-
-                                        <div className="space-y-4">
-
-
-
-                                                <p className="text-lg text-white/80 leading-relaxed">
-                                                    <strong>Software Development:</strong> Full-Stack JavaScript (Node.js, Express, MySQL), Frontend Development,
-                                                    Backend development, UI Implementation.
-                                                    <br />
-                                                    <strong>Artificial Intelligence:</strong> Deep Learning, Machine Learning (Graduate Coursework – CSS296S).
-                                                    <br />
-                                                    <strong>IT & Systems:</strong> PC Diagnostics, Hardware Repair, System Setup & Troubleshooting.
-                                                    <br/>
-                                                    <button
-                                                        type="button"
-                                                        onClick={() => setShowTLDRAbout(false)}
-                                                        className="inline-block py-3 px-6 bg-orange-400 rounded-full text-sm font-bold
-                                         uppercase tracking-widest hover:scale-90 active:scale-95 transition duration-150"
-                                                    >
-                                                        back
-                                                    </button>
-                                                </p>
-
-
+                                        <div className="pt-2">
+                                            <button
+                                                type="button"
+                                                onClick={() => setShowTLDRAbout(false)}
+                                                className="inline-block py-3 px-6 bg-orange-400 rounded-full text-sm font-bold
+                           uppercase tracking-widest hover:scale-90 active:scale-95 transition duration-150"
+                                            >
+                                                back
+                                            </button>
                                         </div>
 
                                     </div>
