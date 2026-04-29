@@ -36,7 +36,7 @@ export default function App() {
             id: 2,
             name: "Social Impact Data Analytics Project",
             title: "Fair-Lending Disparity Analysis Tool",
-            href: "/https://travis-cu-fair-lending-production.up.railway.app",
+            href: "https://travis-cu-fair-lending-production.up.railway.app",
             description:
                 "An interactive web tool that surfaces lending patterns across demographic groups in real Travis Credit Union 2024 HMDA loan applications, sourced directly from the CFPB. " +
                 "Users filter by race, ethnicity, age, loan purpose, county, and more — grouping and aggregating across six metrics to support fair-lending analysis under the HMDA framework. " +
