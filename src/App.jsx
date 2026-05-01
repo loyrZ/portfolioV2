@@ -389,7 +389,7 @@ export default function App() {
                                     : "opacity-0 max-h-np0 -translate-y-2 pointer-events-none"}
                                      : "opacity-0 max-h-0 -translate-y-2"}`}
                             >
-                                I'm a Computer Science student at California State University, Sacramento, based in Sacramento and open to relocating in the coming months.
+                                I'm a Computer Science student at California State University, Sacramento, based in Sacramento.
 
                                 I started teaching myself to code at 17 through Codecademy, drawn to programming as a creative outlet and a way to build software that feels both functional and expressive.
 
