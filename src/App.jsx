@@ -38,19 +38,26 @@ export default function App() {
             title: "Fair-Lending Disparity Analysis Tool",
             href: "https://travis-cu-fair-lending-production.up.railway.app",
             description:
-                "An interactive web tool that surfaces lending patterns across demographic groups in real Travis Credit Union 2024 HMDA loan applications, sourced directly from the CFPB. " +
-                "Users filter by race, ethnicity, age, loan purpose, county, and more — grouping and aggregating across six metrics to support fair-lending analysis under the HMDA framework. " +
-                "Built with Node.js, Express, MySQL, and Chart.js. ETL pipeline ingests real CFPB Modified LAR data, decodes HMDA codes into readable values, and loads into a queryable analytical schema mirroring fair-lending analyst workflows. " +
-                "Deployed April 2026. Roadmap: Census ACS demographic comparison (v2), interactive Leaflet map of service-area lending patterns (v3).",
+                "An interactive analytics platform that surfaces lending patterns across demographic groups in real Travis Credit Union 2024 HMDA loan applications, sourced directly from the CFPB. " +
+                "Users slice 1,443 real loan applications across race, ethnicity, age, sex, loan purpose, county, and loan product type — aggregating by count, approval rate, average income, loan amount, interest rate, or LTV. " +
+                "Click any bar to drill down into outcome breakdowns (accepted vs denied), income and loan-amount distributions split by outcome, geographic breakdowns, and individual application records. " +
+                "A demographic comparison view pits the applicant pool against U.S. Census ACS resident demographics, surfacing representation gaps at the county and census-tract level. " +
+                "An interactive Leaflet map visualizes lending activity across Travis CU's service area with branch locations and county-level choropleth shading. " +
+                "A feedforward neural network trained in TensorFlow.js predicts denial probability with a what-if UI and counterfactual analysis — showing how denial probability shifts when a single protected-class feature changes, mirroring how regulators probe for disparate impact. " +
+                "ETL pipeline ingests CFPB Modified LAR data and ACS 5-year estimates, decodes HMDA codes, and loads into a denormalized analytical schema. Deployed April 2026.",
             tags: [
                 "Data Analytics",
                 "Fair Lending",
                 "HMDA",
+                "Deep Learning",
+                "TensorFlow.js",
                 "SQL",
                 "Node.js",
                 "Express",
                 "ETL",
-                "Chart.js"
+                "Chart.js",
+                "Leaflet",
+                "Census ACS"
             ],
             icon: ""
         },
