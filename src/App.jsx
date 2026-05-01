@@ -303,7 +303,7 @@ export default function App() {
                         </a>
 
 
-                        <a href="https://www.linkedin.com/in/gates-subroto-4367772aa" target="_blank" rel="noreferrer">
+                        <a href="https://www.linkedin.com/in/gates-hadisubroto-4367772aa" target="_blank" rel="noreferrer">
                             <FaLinkedin size={44} className="hover:text-white hover:scale-150 transition" />
                         </a>
 
