@@ -26,28 +26,29 @@ export default function App() {
             id: 1,
             name: "Social Impact Data Analytics Project",
             title: "Fair-Lending Disparity Analysis Tool",
-            href: "https://travis-cu-fair-lending-production.up.railway.app",
+            href: "https://travis-private-repo-production.up.railway.app",
             description:
-                "An interactive analytics platform that surfaces lending patterns across demographic groups in real Travis Credit Union 2024 HMDA loan applications, sourced directly from the CFPB. " +
-                "Users slice 1,443 real loan applications across race, ethnicity, age, sex, loan purpose, county, and loan product type — aggregating by count, approval rate, average income, loan amount, interest rate, or LTV. " +
-                "Click any bar to drill down into outcome breakdowns (accepted vs denied), income and loan-amount distributions split by outcome, geographic breakdowns, and individual application records. " +
-                "A demographic comparison view pits the applicant pool against U.S. Census ACS resident demographics, surfacing representation gaps at the county and census-tract level. " +
-                "An interactive Leaflet map visualizes lending activity across Travis CU's service area with branch locations and county-level choropleth shading. " +
-                "A feedforward neural network trained in TensorFlow.js predicts denial probability with a what-if UI and counterfactual analysis — showing how denial probability shifts when a single protected-class feature changes, mirroring how regulators probe for disparate impact. " +
-                "ETL pipeline ingests CFPB Modified LAR data and ACS 5-year estimates, decodes HMDA codes, and loads into a denormalized analytical schema. Deployed April 2026.",
+                "A fair-lending analysis of Travis Credit Union's 2024 HMDA loan applications, identifying disparities in denial rates across race, ethnicity, income, and geography. " +
+                "The findings page presents six data-driven sections: denial rates by ethnicity and race, a DTI threshold analysis revealing a hard underwriting cliff at 45% that disproportionately affects Hispanic applicants, low- and moderate-income community impact, and product-level denial patterns. " +
+                "A feedforward neural network trained in TensorFlow.js runs counterfactual analysis — re-predicting every application with race swapped while holding income, DTI, LTV, and loan purpose constant — to test whether demographic disparities persist after controlling for financial factors. " +
+                "Supporting the analysis: an interactive explorer for slicing 1,443 applications across eight dimensions and six metrics, a demographic comparison view matching applicants against U.S. Census ACS resident populations, an interactive Leaflet map of Travis CU's 12-county service area, and a drill-down panel with outcome breakdowns, income distributions, and individual application records. " +
+                "ETL pipeline ingests CFPB Modified LAR data and ACS 5-year estimates, decodes HMDA codes, and loads into a denormalized MySQL analytical schema. Deployed April 2026.",
             tags: [
-                "Data Analytics",
                 "Fair Lending",
+                "Data Analytics",
+                "Disparity Analysis",
                 "HMDA",
                 "Deep Learning",
                 "TensorFlow.js",
+                "Counterfactual Analysis",
                 "SQL",
                 "Node.js",
                 "Express",
                 "ETL",
                 "Chart.js",
                 "Leaflet",
-                "Census ACS"
+                "Census ACS",
+                "CRA / LMI"
             ],
             icon: ""
         },
