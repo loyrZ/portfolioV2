@@ -54,7 +54,7 @@ export default function App() {
         },
         {
             id: 2,
-            name: "Multimodal Deep Learning for Nutrition - Report Preview available - Code in progress",
+            name: "Multimodal Deep Learning for Nutrition - Report Preview available - Code will be published May 15 2026",
             title: "Beyond Calories: A Multimodal Deep Learning Comparison for Nutritional Health Prediction",
             href: "/projects/wellbeing-predictor.html",
             description:
@@ -189,17 +189,11 @@ export default function App() {
         },
         {
             id: "335355",
-            name: "Unified Ubiqutious Utility",
+            name: "UUU",
             title: "Will be published at its own website within 8 months",
             href: "/",
             description:
-                "Full-stack proof-of-concept that answers plain-English dental insurance questions (\"Is a root canal " +
-                "covered? What's my deductible?\") using an LLM grounded in a plan document. Java + Spring Boot REST " +
-                "backend exposes typed JSON endpoints; Angular frontend provides a chat UI consuming the backend via " +
-                "HttpClient and Observables. OpenAI integration uses system-prompt knowledge injection from a plan " +
-                "document. Containerized with Docker (multi-stage Angular build, separate Spring Boot service) and " +
-                "orchestrated with docker-compose. Applied the factory pattern for response formatting and OOP design " +
-                "across services.",
+                "Pushing the frequency of a imagination into this world",
             tags: [
                 "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
                 "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
