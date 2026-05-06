@@ -84,11 +84,15 @@ export default function App() {
         },
         {
             id: 3,
-            name: "Historical Map - Will Publish before May 4th at 9pm PST",
+            name: "Historical Map - Published",
             title: "Historical Map of California",
-            href: "/",
+            href: "https://historicalmap-production.up.railway.app",
             description:
-                "A full-stack project built to help visualize historical events across California. Users can filter and explore events by year, view their geographic distribution on an interactive map, and contribute new data through user input. The application highlights patterns and concentrations of historical activity while providing an intuitive way to navigate both time and location.",
+                "A full-stack project built to help visualize historical events across California. " +
+                "Users can filter and explore events by year, view their geographic distribution on " +
+                "an interactive map, and contribute new data through user input. The application " +
+                "highlights patterns and concentrations of historical activity while providing an " +
+                "intuitive way to navigate both time and location.",
             tags: [
                 "SQL",
                 "Node.js",
