@@ -193,11 +193,12 @@ export default function App() {
         },
         {
             id: "335355",
-            name: "UUU",
-            title: "Will be published at its own website within 8 months",
+            name: "Heirs of Earth",
+            title: "Will be published at www.heirsofearth.com",
             href: "/",
             description:
-                "Pushing the frequency of a imagination into this world",
+                "Pushing the frequency of a imagination into this world. \n" +
+                "This is a real project and it's patent pending.",
             tags: [
                 "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
                 "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
